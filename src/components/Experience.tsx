@@ -37,36 +37,48 @@ const data = {
             subtitle: "Ather Energy Ltd",
             workType: "Full-time",
             workDescription: [
-                "Develop HMI layer of Vehicle",
-                "Develop Testing and Diagnostics Software"
+                "Develop HMI layer of Vehicle interfacing with multiple Embedded Systems ",
+                "Develop common Factory and Diagnostics Software",
+                "Develop & Test Navigation Systems using multiple Map providers",
+                "Perform R&D on multiple features and concepts",
+                "Leveraged AI tools(Gemini,Claude,GPT) to enhance functionality and integration",
+                "Stabilize Bluetooth Low Energy and Wifi Architectures"
             ],
-            dateText: "02/2024 – Present"
+            dateText: "02/2024 – 07/2025"
         },
         {
             title: "Member of Technical Staff",
             subtitle: "42Gears Mobility Systems Pvt Ltd",
             workType: "Full-time",
             workDescription: [
-                "Develop & manage MDM solution",
-                "Develop android apps for Phone, POS, wear OS & VR"
+                "Develop & manage MDM solution for Enterprise Customers",
+                "Develop android apps for Phone, POS, SmartWatches & Immersive Tech Headsets(VR)",
+                "Work closely with Android Enterprise Community to resolve bugs",
+                "Develop innovative solutions for Remote Support features on non-standard and unsupported platforms",
+                "Architected and Developed new Mobile Application to lock Camera in sensitive areas for enterprises"
             ],
             dateText: "07/2021 – 01/2024"
         },
         {
             title: "Application Developer",
-            subtitle: "Vrook",
+            subtitle: "Vrook Inc",
             workType: "Internship",
             workDescription: [
-                "Develop User Interface and framework for chatbot using React & React Native"
+                "Develop User Interface and framework for chatbot using React & React Native",
+                "Implement and Deploy learning platform based on OpenEdX",
+                "Modify content for VR platforms accessibility"
             ],
-            dateText: "07/2020 – 12/2022"
+            dateText: "07/2020 – 12/2020"
         },
         {
             title: "Android Developer",
             subtitle: "Dwaiampayana Technologies",
             workType: "Internship",
             workDescription: [
-                "Developed multiple customer-centric android applications.",
+                "Developed Mobile application for e-commerce Laundry Platform with PHP Backend",
+                "Developed Mobile application for Temple Details and Seva(Divine Services) Booking with Payment Integration",
+                "Developed Mobile Application for Mobile Service Company",
+                "Developed PHP backend for Hindi to English translation and transliteration",
             ],
             dateText: "03/2020 – 06/2020"
         },
@@ -75,7 +87,7 @@ const data = {
             subtitle: "Eckovation",
             workType: "Internship",
             workDescription: [
-                "Develop an aggregated applicable for cab hailing, food ordering and location services",
+                "Develop an aggregated applicable for cab hailing, food ordering and location services using available Indian Services at that time (OlaCabs,Zomato,Google Maps)",
             ],
             dateText: "06/2019"
         }

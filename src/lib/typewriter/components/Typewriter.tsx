@@ -30,7 +30,7 @@ export const Typewriter = ({
 
     return (
         <>
-            <span style={{fontSize: "1.5em"}}>{text}</span>
+            <span style={{fontSize: "2em"}}>{text}</span>
             {cursor && (
                 <Cursor
                     cursorStyle={cursorStyle}

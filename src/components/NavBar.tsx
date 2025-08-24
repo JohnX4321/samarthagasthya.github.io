@@ -55,8 +55,8 @@ const data = {
             type: "int"
         },
         {
-            title: "About",
-            href: "/about",
+            title: "Education",
+            href: "/edu",
             type: "int"
         },
         {
@@ -74,6 +74,11 @@ const data = {
             href: "/projects",
             type: "int"
         },
+        {
+            title: "Certifications",
+            href: "/certifications",
+            type: "int"
+        }
     ]
 };
 

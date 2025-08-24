@@ -17,7 +17,7 @@ const ThemeToggle = (props: ThemeToggleProps) => {
         <>
             <AppContext.Consumer>
                 {(values) => (
-                    <div style={{marginBottom: 8}}>
+                    <div style={{marginTop: 8}}>
                         <DarkModeToggle
                             onChange={() => handleOnChange(values)}
                             isDarkMode={values.isDarkMode}
