@@ -1,26 +1,4 @@
-import ReactMarkdown from "react-markdown";
-import {Container,Col,Row} from "react-bootstrap";
-import {Fade} from "react-bootstrap";
 import Header from "./Header.tsx";
-import FallbackSpinner from "./FallbackSpinner.tsx";
-
-const styles = {
-    introTextContainer: {
-        margin: 10,
-        flexDirection: "column" as const,
-        whiteSpace: "pre-wrap" as const,
-        textAlign: "left" as const,
-        fontSize: "1.2em",
-        fontWeight: 500
-    },
-    introImageContainer: {
-        margin: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        display: "flex"
-    }
-};
-
 const certificationsData = {
     links: [
         {
@@ -58,11 +36,6 @@ type HeaderProps = {
 
 const Certifications = (props: HeaderProps) => {
     const {header} = props;
-
-    const parseIntro = (text: string) => (
-        <ReactMarkdown children={text} />
-    )
-
     return(
         <>
             <Header title={header} />

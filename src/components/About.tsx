@@ -1,4 +1,3 @@
-import ReactMarkdown from "react-markdown";
 import {Container,Col,Row} from "react-bootstrap";
 import {Fade} from "react-bootstrap";
 import Header from "./Header.tsx";
@@ -56,9 +55,6 @@ type HeaderProps = {
 const About = (props: HeaderProps)=> {
     const {header} = props;
 
-    const parseIntro = (text: string) => (
-        <ReactMarkdown children={text} />
-    )
 
     return  (
         <>
