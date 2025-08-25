@@ -14,12 +14,11 @@ const styles = {
     },
     mainContainer: {
         height: "80%",
-        display: "flex" as const,
-        flexDirection: "column" as const,
         justifyContent: "center" as const,
         alignItems: "center" as const,
         verticalAlign: "bottom" as const,
-    }
+        paddingBottom: 50
+}
 };
 
 const data = {
