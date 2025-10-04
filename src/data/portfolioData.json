@@ -44,7 +44,7 @@
     {
       "category": "Programming Languages",
       "items": [
-        { "name": "PHP", "icon": "faPhp", "type": "brands" },
+        { "name": "Kotlin", "icon": "faKotlin", "type": "rsi" },
         { "name": "Java", "icon": "faJava", "type": "brands" },
         { "name": "Python", "icon": "faPython", "type": "brands" },
         { "name": "JavaScript", "icon": "faJs", "type": "brands" },
@@ -55,7 +55,7 @@
         { "name": "Swift", "icon": "faSwift", "type": "rsi" },
         { "name": "C#", "icon": "faCSharp", "type": "rsi" },
         { "name": "Dart", "icon": "faDart", "type": "rsi" },
-        { "name": "Kotlin", "icon": "faKotlin", "type": "rsi" }
+        { "name": "PHP", "icon": "faPhp", "type": "brands" }
       ]
     },
     {

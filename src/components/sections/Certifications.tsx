@@ -190,7 +190,7 @@ export const Certifications: React.FC = () => {
           className="mt-16"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
-            View More Badges at
+            More Badges at
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {portfolioData.badgeProviders.map((provider, index) => (
