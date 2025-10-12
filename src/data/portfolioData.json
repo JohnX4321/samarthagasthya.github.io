@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Samarth Agasthya M S",
-    "title": "Android,Embedded,Full Stack,Application Developer",
+    "title": "Mobile App,Embedded,Full Stack,Application Developer",
     "tagline": "Pursuing MSCS @ ASU",
     "bio": "Highly Skilled Software Engineer with 4+ YOE in Software Engineering. ",
     "email": "",
@@ -460,6 +460,28 @@
       "description": "",
       "skills": ["Oracle Cloud"],
       "badgeUrl": "https://catalog-education.oracle.com/ords/certview/sharebadge?id=8623070F64E6511FAF5F6967EC7EF8565C265C93C447F11176D188BADE2489A5"
+    },
+    {
+      "id": 9,
+      "name": "OCI 2025 Cloud Generative AI Professional",
+      "provider": "OCI",
+      "issuer": "Oracle",
+      "date": "August 2025",
+      "credentialId": "",
+      "description": "",
+      "skills": ["Oracle Cloud","Gen AI Service","LLM"],
+      "badgeUrl": "https://catalog-education.oracle.com/pls/certview/sharebadge?id=159E7CC0153A82F30E5F3DF226EC10D494E9FDF4750F26CE6F246466B6B6F90F"
+    },
+    {
+      "id": 10,
+      "name": "Google Cloud Digital Leader",
+      "provider": "Google",
+      "issuer": "Google",
+      "date": "June 2025",
+      "credentialId": "",
+      "description": "",
+      "skills": ["Google Cloud","Cloud Computing"],
+      "badgeUrl": "https://www.credly.com/badges/95d56e83-060a-45f8-b6e4-8082482618a3"
     }
   ],
   "badgeProviders": [
