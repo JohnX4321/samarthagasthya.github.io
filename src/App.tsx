@@ -29,6 +29,7 @@ function App() {
           <p>&copy; 2025 . Built using TailwindCSS, React.js, Bootstrap</p>
             <p>Hosted on Vercel</p>
                     <p>Find Source at {" "}<a href={"https://github.com/JohnX4321/samarthagasthya.github.io/"} target={"_blank"}><SiGithub className="inline-flex text-gray-700 dark:text-gray-300 group-hover:text-red-200 dark:group-hover:text-red-400 "/></a></p>
+                    <p>Icons fetched from : Icons8. Logos are trademarks of their respective owners.</p>
                 </footer>
             </div>
         </ThemeProvider>

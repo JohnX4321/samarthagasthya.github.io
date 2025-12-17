@@ -48,7 +48,7 @@ export const Navigation: React.FC = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <motion.div
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-accent-600 dark:from-blue-400 dark:to-accent-400 bg-clip-text text-transparent"
             whileHover={{ scale: 1.05 }}
           >
             Portfolio

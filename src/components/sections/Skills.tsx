@@ -101,7 +101,7 @@ export const Skills: React.FC = () => {
                     <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
                         Skills & Expertise
                     </h2>
-                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+                    <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 gap-8">
@@ -113,7 +113,7 @@ export const Skills: React.FC = () => {
                             transition={{ duration: 0.6, delay: categoryIndex * 0.1 }}
                             className="neomorph-card bg-gray-50 dark:bg-gray-900 rounded-3xl p-8"
                         >
-                            <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                            <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white bg-gradient-to-r from-blue-600 to-accent-600 dark:from-blue-400 dark:to-accent-400 bg-clip-text text-transparent">
                                 {skillCategory.category}
                             </h3>
 
@@ -154,7 +154,7 @@ export const Skills: React.FC = () => {
                                             <motion.div
                                                 initial={{ opacity: 0, y: 10 }}
                                                 whileHover={{ opacity: 1, y: 0 }}
-                                                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-xs rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none"
+                                                className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-gradient-to-r from-blue-600 to-accent-600 text-white text-xs rounded-full whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-lg pointer-events-none"
                                             >
                                                 {skill.name}
                                             </motion.div>
@@ -172,7 +172,7 @@ export const Skills: React.FC = () => {
                     transition={{ duration: 0.6, delay: 0.4 }}
                     className="mt-12 text-center"
                 >
-                    <div className="inline-block neomorph-card bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6">
+                    <div className="inline-block neomorph-card bg-gradient-to-r from-blue-50 to-accent-50 dark:from-blue-900/20 dark:to-accent-900/20 rounded-2xl p-6">
                         <p className="text-gray-700 dark:text-gray-300 text-lg">
                             Constantly learning and evolving with new technologies and best practices
                         </p>

@@ -76,7 +76,7 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
               {project.technologies.map((tech, idx) => (
                 <span
                   key={idx}
-                  className="px-3 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
+                  className="px-3 py-1 bg-gradient-to-r from-blue-100 to-accent-50 dark:from-blue-900/30 dark:to-accent-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium"
                 >
                   {tech}
                 </span>
@@ -91,7 +91,7 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
             <ul className="space-y-2">
               {project.highlights.map((highlight, idx) => (
                 <li key={idx} className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
-                  <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2 flex-shrink-0" />
+                  <span className="w-1.5 h-1.5 bg-gradient-to-r from-blue-600 to-accent-600 rounded-full mt-2 flex-shrink-0" />
                   <span>{highlight}</span>
                 </li>
               ))}
@@ -113,7 +113,7 @@ export const Projects: React.FC = () => {
     <section id="projects" className="min-h-screen py-20 px-6 bg-white dark:bg-gray-800 relative overflow-hidden">
       <div className="absolute inset-0 opacity-30 dark:opacity-10">
         <div className="absolute top-20 left-10 w-96 h-96 bg-blue-400 dark:bg-blue-600 rounded-full blur-3xl" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-purple-400 dark:bg-purple-600 rounded-full blur-3xl" />
+  <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-400 dark:bg-accent-600 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
@@ -127,7 +127,7 @@ export const Projects: React.FC = () => {
           <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Featured Projects
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
           <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             A showcase of innovative solutions and creative implementations
           </p>

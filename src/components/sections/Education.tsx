@@ -23,7 +23,7 @@ export const Education: React.FC = () => {
           <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Education
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
         </motion.div>
 
         <div className="space-y-8">
@@ -42,7 +42,7 @@ export const Education: React.FC = () => {
                       <motion.div
                         whileHover={{ rotate: 360 }}
                         transition={{ duration: 0.6 }}
-                        className="neomorph-icon bg-gradient-to-br from-blue-500 to-purple-600 p-4 rounded-2xl flex-shrink-0"
+                        className="neomorph-icon bg-gradient-to-br from-blue-500 to-accent-600 p-4 rounded-2xl flex-shrink-0"
                       >
                         <GraduationCap className="w-8 h-8 text-white" />
                       </motion.div>
@@ -83,7 +83,7 @@ export const Education: React.FC = () => {
                             transition={{ delay: index * 0.2 + idx * 0.1 }}
                             className="flex items-start gap-3 text-gray-700 dark:text-gray-300"
                           >
-                            <span className="w-2 h-2 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full mt-2 flex-shrink-0" />
+                            <span className="w-2 h-2 bg-gradient-to-r from-blue-600 to-accent-600 rounded-full mt-2 flex-shrink-0" />
                             <span>{highlight}</span>
                           </motion.li>
                         ))}

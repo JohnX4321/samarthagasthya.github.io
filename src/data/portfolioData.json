@@ -20,9 +20,10 @@
       "institution": "Arizona State University",
       "location": "Tempe, AZ, USA",
       "period": "2025 - 2027*",
-      "gpa": "N/A",
+      "gpa": "3.8/4.0",
       "highlights": [
-        "Interest in Systems Engineering and Distributed Systems"
+        "Interest in Systems Engineering and Distributed Systems",
+        "Fall 2025 - Advanced Computer Architecture \n , Statistical Learning Theory, Distributed Database Systems"
       ]
     },
     {
@@ -502,6 +503,18 @@
       "logo": "https://img.icons8.com/?size=100&id=22989&format=png&color=000000",
       "url": "https://learn.microsoft.com/en-gb/users/samarthagasthyams-7917",
       "description": "Microsoft certification and training resources"
+    },
+    {
+      "name": "CodeSignal",
+      "logo": "https://scontent-sjc6-1.xx.fbcdn.net/v/t39.30808-6/310757286_3293768177545034_3229446108443831667_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=9l-0tuHlSeMQ7kNvwFJl3fK&_nc_oc=AdkzmUwM9aPGMu_eT3C2HULtimZ5iGLSM_MbAHmJDxcX49IVcfCduxGJ-ey4r62fg9TyQ2bPdwywyGZHD0-DmYzF&_nc_zt=23&_nc_ht=scontent-sjc6-1.xx&_nc_gid=CyXAsjzGp8nwNfEaDPeKbw&oh=00_AfmvRAErbNmn6FuVHlUOu6zm8FEeI9bIbSb1buWPNHTk8w&oe=6948FF75",
+      "url": "https://codesignal.com/learn/profile/cmemfpcw80043l504wtdj407p",
+      "description": "CodeSignal Achievements"
+    },
+    {
+      "name": "Hackerrank",
+      "logo": "https://img.icons8.com/?size=100&id=OUPsEPLKIebZ&format=png&color=000000",
+      "url": "https://codesignal.com/learn/profile/cmemfpcw80043l504wtdj407p",
+      "description": "Hackerrank Achievements"
     }
   ]
 }

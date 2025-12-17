@@ -41,7 +41,7 @@ export const Certifications: React.FC = () => {
           <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Certifications
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
           <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
             Professional certifications and continuous learning achievements
           </p>
@@ -68,7 +68,7 @@ export const Certifications: React.FC = () => {
                 whileTap={{ scale: 0.95 }}
                 className={`px-6 py-3 rounded-full font-medium transition-all ${
                   selectedProvider === provider
-                    ? 'bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-lg'
+                    ? 'bg-gradient-to-r from-blue-600 to-accent-600 text-white shadow-lg'
                     : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:shadow-md neomorph-card'
                 }`}
               >
@@ -161,7 +161,7 @@ export const Certifications: React.FC = () => {
                         initial={{ scale: 0 }}
                         animate={inView ? { scale: 1 } : {}}
                         transition={{ delay: index * 0.1 + idx * 0.05 }}
-                        className="px-2 py-1 bg-gradient-to-r from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium"
+                        className="px-2 py-1 bg-gradient-to-r from-blue-100 to-accent-50 dark:from-blue-900/30 dark:to-accent-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium"
                       >
                         {skill}
                       </motion.span>
@@ -173,7 +173,7 @@ export const Certifications: React.FC = () => {
                   href={cert.badgeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:-translate-y-1"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-accent-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:-translate-y-1"
                 >
                   <span>View Badge</span>
                   <ExternalLink className="w-4 h-4" />
@@ -206,7 +206,7 @@ export const Certifications: React.FC = () => {
                 className="neomorph-card bg-white dark:bg-gray-800 rounded-2xl p-6 hover:shadow-xl transition-all group"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/30 dark:to-purple-900/30 flex items-center justify-center">
+                  <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-blue-100 to-accent-50 dark:from-blue-900/30 dark:to-accent-900/30 flex items-center justify-center">
                     <img
                       src={provider.logo}
                       alt={provider.name}
@@ -235,7 +235,7 @@ export const Certifications: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="mt-12 text-center"
         >
-          <div className="inline-block neomorph-card bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8">
+          <div className="inline-block neomorph-card bg-gradient-to-r from-blue-50 to-accent-50 dark:from-blue-900/20 dark:to-accent-900/20 rounded-2xl p-8">
             <p className="text-gray-700 dark:text-gray-300 text-lg mb-2">
               Committed to continuous professional development
             </p>

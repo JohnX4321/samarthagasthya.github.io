@@ -23,11 +23,11 @@ export const Experience: React.FC = () => {
           <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
             Work Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
         </motion.div>
 
         <div className="relative">
-          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 via-purple-600 to-pink-600 rounded-full" />
+          <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-blue-600 via-accent-600 to-pink-600 rounded-full" />
 
           <div className="space-y-12">
             {portfolioData.experience.map((exp, index) => (
@@ -46,7 +46,7 @@ export const Experience: React.FC = () => {
                       <motion.div
                         whileHover={{ scale: 1.1, rotate: 360 }}
                         transition={{ duration: 0.6 }}
-                        className="neomorph-icon bg-gradient-to-br from-blue-500 to-purple-600 p-3 rounded-xl flex-shrink-0"
+                        className="neomorph-icon bg-gradient-to-br from-blue-500 to-accent-600 p-3 rounded-xl flex-shrink-0"
                       >
                         <Briefcase className="w-6 h-6 text-white" />
                       </motion.div>
@@ -110,7 +110,7 @@ export const Experience: React.FC = () => {
                     initial={{ scale: 0 }}
                     animate={inView ? { scale: 1 } : {}}
                     transition={{ delay: index * 0.2, type: 'spring' }}
-                    className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 shadow-lg"
+                    className="w-6 h-6 rounded-full bg-gradient-to-br from-blue-500 to-accent-600 shadow-lg"
                   >
                     <motion.div
                       animate={{
