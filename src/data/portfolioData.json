@@ -8,7 +8,7 @@
     "phone": "",
     "location": "Tempe, AZ",
     "social": {
-      "github": "https://github.com/JohnX4321",
+      "github": "https://github.com/samarthsubramanya",
       "linkedin": "https://linkedin.com/samarth-agasthya-m-s",
       "twitter": ""
     }
@@ -23,7 +23,8 @@
       "gpa": "3.8/4.0",
       "highlights": [
         "Interest in Systems Engineering and Distributed Systems",
-        "Fall 2025 - Advanced Computer Architecture \n , Statistical Learning Theory, Distributed Database Systems"
+        "Fall 2025 - Advanced Computer Architecture , Statistical Learning Theory, Distributed Database Systems",
+        "Spring 2026 - Foundations of Algorithms, Reconfigurable Computing, Engineering Blockchain Applications"
       ]
     },
     {
@@ -143,11 +144,24 @@
   "experience": [
     {
       "id": 1,
+      "title": "Human Computer Interaction Specialist (Research)",
+      "company": "Herberger Institute for Design and the Arts, ASU",
+      "url" :  "https://www.asu.edu",
+      "location": "Tempe, AZ, USA",
+      "period": "Feb 2026 - Present",
+      "type": "Part-time",
+      "description": "Perform Research on various Data Visualization projects",
+      "achievements": [
+
+      ]
+    },
+    {
+      "id": 2,
       "title": "Instructional Assistant and Grader",
       "company": "School of Mathematics & Statistical Sciences, ASU",
       "url" :  "https://www.asu.edu",
       "location": "Tempe, AZ, USA",
-      "period": "Sep 2025 - Present",
+      "period": "Sep 2025 - Feb 2026",
       "type": "Part-time",
       "description": "IA and Grader for Mathematics Classes for College Mathematics and College Algebra",
       "achievements": [
@@ -155,7 +169,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Application Developer - Android Applications",
       "url": "https://atherenergy.com",
       "company": "Ather Energy Ltd",
@@ -179,7 +193,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Member of Technical Staff",
       "company": "42Gears Mobility Systems Pvt Ltd",
       "url": "https://42gears.com",
@@ -200,7 +214,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Application Developer Intern",
       "company": "Vrook Inc",
       "url" :  "https://vrook.co",
@@ -217,7 +231,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Android Developer Intern",
       "company": "Dwaiampayana Technologies",
       "url" :  "",
@@ -236,7 +250,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Intern",
       "company": "Pantech Learning",
       "url" :  "",
@@ -249,7 +263,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Java Developer Intern",
       "company": "Eckovation",
       "url" : "",
@@ -269,7 +283,7 @@
       "category": "Web Agentic AI Application",
       "description": "A DevHacks S2 hackathon project to parse resume , fetch Jobs and Recommend Courses to better suit for the role through compatiblity score",
       "technologies": ["React", "Python", "LangFlow", "LangChain"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/nextstep.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/nextstep.png?raw=true",
       "links": {
         "live": "#",
         "github": "https://github.com/kaizen-38/Devhacks_HackerTrack_LavaLamps_NextStep"
@@ -284,10 +298,10 @@
       "category": "Mobile & Web App",
       "description": "An Application to fetch and display Covid Cases regularly with customized webviews for India and Karnataka State, India's statistics",
       "technologies": ["Node.js","Sheets","React.js","React Native"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/ct.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/ct.png?raw=true",
       "links": {
         "live": "#",
-        "github": "https://github.com/JohnX4321/covid_tracker"
+        "github": "https://github.com/samarthsubramanya/covid_tracker"
       },
       "highlights": [
 
@@ -299,10 +313,10 @@
       "category": "Embedded System",
       "description": "A kiosk to display government schemes, scholarships info, Local Wholesale Crop Sales Portal and Jobs Portal through integrated ID",
       "technologies": ["React.js","Express.js","Node.js","Python","Tkinter","Raspberry Pi","PiCamera"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/kiosk_crop.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/kiosk_crop.png?raw=true",
       "links": {
         "live": "#",
-        "github": "https://github.com/JohnX4321/finalproj"
+        "github": "https://github.com/samarthsubramanya/finalproj"
       },
       "highlights": [
 
@@ -314,10 +328,10 @@
       "category": "Mobile App",
       "description": "A calculator application to perform mathematical calculations",
       "technologies": ["EvalEx","Java"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/calculator.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/calculator.png?raw=true",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.calculator",
-        "github": "https://github.com/JohnX4321/Calculator"
+        "github": "https://github.com/samarthsubramanya/Calculator"
       },
       "highlights": [
 
@@ -329,10 +343,10 @@
       "category": "Developer Tool",
       "description": "An applicaton developed for Industry Workshop at DSCE college to compile user generated Verilog code, validate if the code is correct and publish results for the respective question",
       "technologies": ["Python","IVerilog","Tkinter"],
-      "image": "https://images.pexels.com/photos/6801648/pexels-photo-6801648.jpeg?auto=compress&cs=tinysrgb&w=800",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/Verilog_Quizzer.webp?raw=true",
       "links": {
         "live": "#",
-        "github": "https://github.com/JohnX4321/Verilog_Quizzer"
+        "github": "https://github.com/samarthsubramanya/Verilog_Quizzer"
       },
       "highlights": [
 
@@ -344,10 +358,10 @@
       "category": "Mobile App",
       "description": "A sample application to explore Jetpack Compose capabilities to control Flashlight",
       "technologies": ["Kotlin","Compose"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/flashlight.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/flashlight.png?raw=true",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.flashlight",
-        "github": "https://github.com/JohnX4321/Compose_Flashlight"
+        "github": "https://github.com/samarthsubramanya/Compose_Flashlight"
       },
       "highlights": [
 
@@ -359,10 +373,25 @@
       "category": "Mobile App",
       "description": "An applicaton to fetch and display Device Information and it's capabilities",
       "technologies": ["Kotlin","Compose"],
-      "image": "https://github.com/JohnX4321/johnx4321.github.io/blob/images/deviceinfo.png?raw=true",
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/deviceinfo.png?raw=true",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.deviceinfo",
-        "github": "https://github.com/JohnX4321/DeviceInfo"
+        "github": "https://github.com/samarthsubramanya/DeviceInfo"
+      },
+      "highlights": [
+
+      ]
+    },
+    {
+      "id": 8,
+      "title": "CQA Based Preferred Answer Ranking and Expert Routing System",
+      "category": "ML",
+      "description": "A model trained on Stackoverflow data which can identify patterns in answers and learng the ranking patterns, identify features/tags from the question and route to experts who have answered questions with the inferred tags before.",
+      "technologies": ["Python","PyTorch","Gradio"],
+      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/cqa_expertrouting.webp?raw=true",
+      "links": {
+        "live": "#",
+        "github": "https://github.com/samarthsubramanya/CSE598_SLT_CQA_AnswerRanking"
       },
       "highlights": [
 
@@ -390,7 +419,7 @@
       "credentialId": "",
       "description": "",
       "skills": ["Android"],
-      "badgeUrl": "https://www.credly.com/earner/earned/badge/a3cc9b68-241d-46bf-a0d6-6014d73cc8ed"
+      "badgeUrl": "https://www.credly.com/badges/a3cc9b68-241d-46bf-a0d6-6014d73cc8ed/public_url"
     },
     {
       "id": 3,
@@ -403,7 +432,7 @@
       "skills": [
         "iOS"
       ],
-      "badgeUrl": "https://www.credly.com/earner/earned/badge/03664d03-ae23-403a-ab7a-372fc8dd75af"
+      "badgeUrl": "https://www.credly.com/badges/03664d03-ae23-403a-ab7a-372fc8dd75af/public_url"
     },
     {
       "id": 4,
@@ -427,7 +456,7 @@
       "credentialId": "",
       "description": "",
       "skills": ["TensorFlow","DeepLearning","CNN","Python"],
-      "badgeUrl": "https://www.credly.com/earner/earned/badge/8732fe3f-bed4-41b2-9955-474ffe37fd6b"
+      "badgeUrl": "https://www.credly.com/badges/8732fe3f-bed4-41b2-9955-474ffe37fd6b/public_url"
     },
     {
       "id": 6,
@@ -483,7 +512,30 @@
       "description": "",
       "skills": ["Google Cloud","Cloud Computing"],
       "badgeUrl": "https://www.credly.com/badges/95d56e83-060a-45f8-b6e4-8082482618a3"
+    },
+    {
+      "id": 11,
+      "name": "AWS Cloud Quest: Generative AI Practitioner - Training Badge",
+      "provider": "AWS",
+      "issuer": "AWS",
+      "date": "January 2026",
+      "credentialId": "",
+      "description": "",
+      "skills": ["AWS Cloud","Cloud Computing"],
+      "badgeUrl": "https://www.credly.com/badges/682bcb0f-b184-4634-9559-82af84ae6a84"
+    },
+    {
+      "id": 12,
+      "name": "AI Upskilling Certificate: Technical Foundations",
+      "provider": "Qualcomm",
+      "issuer": "Qualcomm",
+      "date": "January 2026",
+      "credentialId": "",
+      "description": "",
+      "skills": ["Qualcomm","AI"],
+      "badgeUrl": "https://www.credly.com/badges/9cc28355-4ee2-4fd3-89a2-98018f2f13b7"
     }
+    
   ],
   "badgeProviders": [
     {

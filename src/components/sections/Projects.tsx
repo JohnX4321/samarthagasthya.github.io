@@ -84,7 +84,8 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
             </div>
           </div>
 
-          <div>
+          { project.highlights.length > 0 &&
+            <div>
             <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 uppercase tracking-wider">
               Highlights
             </h4>
@@ -97,6 +98,7 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
               ))}
             </ul>
           </div>
+          }
         </div>
       </div>
     </motion.div>
