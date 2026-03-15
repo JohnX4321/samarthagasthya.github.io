@@ -40,7 +40,7 @@ export const Home: React.FC = () => {
             className="mb-8 relative inline-block"
           >
             <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-accent-500 to-pink-500 p-1">
-              <img src="https://github.com/samarthsubramanya/samarthagasthya.github.io/blob/revamp_v3/public/images/about/profile.jpg?raw=true" className="w-full h-full rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-accent-600" alt="Profile Image">
+              <img src="/images/profile.webp" className="w-full h-full rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-accent-600" alt="Profile Image">
                 {/*personal.name.split(' ').map(n => n[0]).join('')*/}
 
               </img>

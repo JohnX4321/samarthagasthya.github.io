@@ -283,7 +283,7 @@
       "category": "Web Agentic AI Application",
       "description": "A DevHacks S2 hackathon project to parse resume , fetch Jobs and Recommend Courses to better suit for the role through compatiblity score",
       "technologies": ["React", "Python", "LangFlow", "LangChain"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/nextstep.png?raw=true",
+      "image": "/images/projects/nextstep.webp",
       "links": {
         "live": "#",
         "github": "https://github.com/kaizen-38/Devhacks_HackerTrack_LavaLamps_NextStep"
@@ -298,7 +298,7 @@
       "category": "Mobile & Web App",
       "description": "An Application to fetch and display Covid Cases regularly with customized webviews for India and Karnataka State, India's statistics",
       "technologies": ["Node.js","Sheets","React.js","React Native"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/ct.png?raw=true",
+      "image": "/images/projects/ct.webp",
       "links": {
         "live": "#",
         "github": "https://github.com/samarthsubramanya/covid_tracker"
@@ -313,7 +313,7 @@
       "category": "Embedded System",
       "description": "A kiosk to display government schemes, scholarships info, Local Wholesale Crop Sales Portal and Jobs Portal through integrated ID",
       "technologies": ["React.js","Express.js","Node.js","Python","Tkinter","Raspberry Pi","PiCamera"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/kiosk_crop.png?raw=true",
+      "image": "/images/projects/kiosk_crop.webp",
       "links": {
         "live": "#",
         "github": "https://github.com/samarthsubramanya/finalproj"
@@ -328,7 +328,7 @@
       "category": "Mobile App",
       "description": "A calculator application to perform mathematical calculations",
       "technologies": ["EvalEx","Java"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/calculator.png?raw=true",
+      "image": "/images/projects/calculator.webp",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.calculator",
         "github": "https://github.com/samarthsubramanya/Calculator"
@@ -343,7 +343,7 @@
       "category": "Developer Tool",
       "description": "An applicaton developed for Industry Workshop at DSCE college to compile user generated Verilog code, validate if the code is correct and publish results for the respective question",
       "technologies": ["Python","IVerilog","Tkinter"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/Verilog_Quizzer.webp?raw=true",
+      "image": "/images/projects/Verilog_Quizzer.webp",
       "links": {
         "live": "#",
         "github": "https://github.com/samarthsubramanya/Verilog_Quizzer"
@@ -358,7 +358,7 @@
       "category": "Mobile App",
       "description": "A sample application to explore Jetpack Compose capabilities to control Flashlight",
       "technologies": ["Kotlin","Compose"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/flashlight.png?raw=true",
+      "image": "/images/projects/flashlight.webp",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.flashlight",
         "github": "https://github.com/samarthsubramanya/Compose_Flashlight"
@@ -373,7 +373,7 @@
       "category": "Mobile App",
       "description": "An applicaton to fetch and display Device Information and it's capabilities",
       "technologies": ["Kotlin","Compose"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/deviceinfo.png?raw=true",
+      "image": "/images/projects/deviceinfo.webp",
       "links": {
         "live": "https://play.google.com/store/apps/details?id=com.thingsenz.deviceinfo",
         "github": "https://github.com/samarthsubramanya/DeviceInfo"
@@ -388,7 +388,7 @@
       "category": "ML",
       "description": "A model trained on Stackoverflow data which can identify patterns in answers and learng the ranking patterns, identify features/tags from the question and route to experts who have answered questions with the inferred tags before.",
       "technologies": ["Python","PyTorch","Gradio"],
-      "image": "https://github.com/samarthsubramanya/samarthsubramanya.github.io/blob/images/cqa_expertrouting.webp?raw=true",
+      "image": "/images/projects/cqa_expertrouting.webp",
       "links": {
         "live": "#",
         "github": "https://github.com/samarthsubramanya/CSE598_SLT_CQA_AnswerRanking"
