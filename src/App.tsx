@@ -1,6 +1,6 @@
 import { ThemeProvider } from './context/ThemeContext';
+import { SkipLink } from './components/SkipLink';
 import { Navigation } from './components/Navigation';
-import { ThemeToggle } from './components/ThemeToggle';
 import { Home } from './components/sections/Home';
 import { Education } from './components/sections/Education';
 import { Skills } from './components/sections/Skills';
@@ -12,11 +12,12 @@ import {SiGithub} from "react-icons/si";
 function App() {
     return (
         <ThemeProvider>
+            <SkipLink />
             <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden">
                 <Navigation />
-                <ThemeToggle />
+                {/* <ThemeToggle /> */}
 
-                <main>
+                <main id="main-content">
                     <Home />
                     <Education />
                     <Skills />

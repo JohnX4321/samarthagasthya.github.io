@@ -34,12 +34,14 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
             <div className="flex gap-4">
-              <a
-                href={project.links.live}
-                className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
-              >
-                <ExternalLink className="w-5 h-5 text-white" />
-              </a>
+              {project.links.live !== "#" && (
+                <a
+                  href={project.links.live}
+                  className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"
+                >
+                  <ExternalLink className="w-5 h-5 text-white" />
+                </a>
+              )}
               <a
                 href={project.links.github}
                 className="p-3 bg-white/20 backdrop-blur-sm rounded-full hover:bg-white/30 transition-colors"

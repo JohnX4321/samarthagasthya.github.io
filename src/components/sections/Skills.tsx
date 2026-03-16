@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import * as solidIcons from '@fortawesome/free-solid-svg-icons';
 import * as brandIcons from '@fortawesome/free-brands-svg-icons';
+import { IconProp } from '@fortawesome/fontawesome-svg-core';
 import {
     SiMongodb,
     SiTypescript,
@@ -22,64 +23,70 @@ import {
 import portfolioData from '../../data/portfolioData.json';
 import {TbBrandKotlin} from "react-icons/tb";
 
-const getIcon = (iconName: string, type: string) => {
+const getIcon = (iconName: string, type: string): IconProp | null => {
     const icons = type === 'brands' ? brandIcons : solidIcons;
-    return icons[iconName as keyof typeof icons];
+    const icon = icons[iconName as keyof typeof icons];
+    return icon ? (icon as IconProp) : null;
 };
 
-const getRSIcon = (iconName: string) => {
-    if (iconName === 'faTS')
-        return <SiTypescript  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faRust')
-        return <SiRust  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faC')
-        return <SiC className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faCpp')
-        return <SiCplusplus  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faKotlin')
-        return <SiKotlin  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faCSharp')
-        return <SiSharp  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faDart')
-        return <SiDart  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faSwift')
-        return <SiSwift className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faCordova')
-        return <SiApachecordova  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faFlutter')
-        return <SiFlutter  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faJetpackCompose')
-        return <SiJetpackcompose  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faKMM')
-        return <TbBrandKotlin  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faUnity')
-        return <SiUnity  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faUnreal')
-        return <SiUnrealengine  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faMongo')
-        return <SiMongodb  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faPSQL')
-        return <SiPostgresql  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faMysql')
-        return <SiMysql  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faNeo')
-        return <SiNeo4J  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faRealm')
-        return <SiRealm  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faCDB')
-        return <SiCockroachlabs  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faVercel')
-        return <SiVercel  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faNetlify')
-        return <SiNetlify  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faXML')
-        return <SiXml  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faJSON')
-        return <SiJson  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    else if (iconName === 'faMaterial')
-        return <SiMaterialdesign  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-    return <SiRocket  className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"/>;
-}
+const getRSIcon = (iconName: string): ReactNode => {
+    const iconClass = "text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300";
+    
+    switch (iconName) {
+        case 'faTS':
+            return <SiTypescript className={iconClass} />;
+        case 'faRust':
+            return <SiRust className={iconClass} />;
+        case 'faC':
+            return <SiC className={iconClass} />;
+        case 'faCpp':
+            return <SiCplusplus className={iconClass} />;
+        case 'faKotlin':
+            return <SiKotlin className={iconClass} />;
+        case 'faCSharp':
+            return <SiSharp className={iconClass} />;
+        case 'faDart':
+            return <SiDart className={iconClass} />;
+        case 'faSwift':
+            return <SiSwift className={iconClass} />;
+        case 'faCordova':
+            return <SiApachecordova className={iconClass} />;
+        case 'faFlutter':
+            return <SiFlutter className={iconClass} />;
+        case 'faJetpackCompose':
+            return <SiJetpackcompose className={iconClass} />;
+        case 'faKMM':
+            return <TbBrandKotlin className={iconClass} />;
+        case 'faUnity':
+            return <SiUnity className={iconClass} />;
+        case 'faUnreal':
+            return <SiUnrealengine className={iconClass} />;
+        case 'faMongo':
+            return <SiMongodb className={iconClass} />;
+        case 'faPSQL':
+            return <SiPostgresql className={iconClass} />;
+        case 'faMysql':
+            return <SiMysql className={iconClass} />;
+        case 'faNeo':
+            return <SiNeo4J className={iconClass} />;
+        case 'faRealm':
+            return <SiRealm className={iconClass} />;
+        case 'faCDB':
+            return <SiCockroachlabs className={iconClass} />;
+        case 'faVercel':
+            return <SiVercel className={iconClass} />;
+        case 'faNetlify':
+            return <SiNetlify className={iconClass} />;
+        case 'faXML':
+            return <SiXml className={iconClass} />;
+        case 'faJSON':
+            return <SiJson className={iconClass} />;
+        case 'faMaterial':
+            return <SiMaterialdesign className={iconClass} />;
+        default:
+            return <SiRocket className={iconClass} />;
+    }
+};
 
 export const Skills: React.FC = () => {
     const [ref, inView] = useInView({
@@ -120,7 +127,6 @@ export const Skills: React.FC = () => {
                             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
                                 {skillCategory.items.map((skill, skillIndex) => {
                                     const icon = getIcon(skill.icon, skill.type);
-                                    // @ts-ignore
                                     return (
                                         <motion.div
                                             key={skillIndex}
@@ -139,11 +145,13 @@ export const Skills: React.FC = () => {
                                                 {
                                                     skill.type === 'rsi' ? (
                                                         getRSIcon(skill.icon)
-                                                    ) : (
+                                                    ) : icon ? (
                                                         <FontAwesomeIcon
                                                             icon={icon}
                                                             className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
                                                         />
+                                                    ) : (
+                                                        <SiRocket className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
                                                     )
                                                 }
                                                 <span className="text-xs font-medium text-gray-600 dark:text-gray-400 mt-2 text-center leading-tight group-hover:text-gray-900 dark:group-hover:text-white transition-colors">

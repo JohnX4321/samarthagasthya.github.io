@@ -130,7 +130,7 @@ export const Home: React.FC = () => {
             {[
               { icon: Github, href: personal.social.github, color: 'hover:text-gray-900 dark:hover:text-white' },
               { icon: Linkedin, href: personal.social.linkedin, color: 'hover:text-blue-600 dark:hover:text-blue-400' }
-            ].map(({ icon: Icon, href, color }, index) => (
+            ].filter(({ href }) => href !== "#").map(({ icon: Icon, href, color }, index) => (
               <motion.a
                 key={index}
                 href={href}
