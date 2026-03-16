@@ -8,44 +8,53 @@ export default defineConfig({
     exclude: ['lucide-react'],
   },
   build: {
+    // Improve caching with named chunks
+    cssCodeSplit: true,
+    sourceMap: false, // Disable source maps in production to reduce bundle size
+    minify: 'esbuild', // Use esbuild (default, faster)
     rollupOptions: {
       output: {
-        manualChunks: {
-          // Split large dependencies
-          'vendor-ui': [
-            'react',
-            'react-dom',
-            'framer-motion',
-            'react-intersection-observer'
-          ],
-          'vendor-icons': [
-            '@fortawesome/react-fontawesome',
-            '@fortawesome/free-solid-svg-icons',
-            '@fortawesome/free-brands-svg-icons',
-            'react-icons'
-          ],
-          'vendor-misc': [
-            'lucide-react'
-          ],
-          // Split components by feature
-          'components-sections': [
-            './src/components/sections/Home.tsx',
-            './src/components/sections/Projects.tsx',
-            './src/components/sections/Skills.tsx',
-            './src/components/sections/Experience.tsx',
-            './src/components/sections/Education.tsx',
-            './src/components/sections/Certifications.tsx'
-          ],
-          // Data and utilities
-          'utils': [
-            './src/utils/imageMap.ts',
-            './src/schemas/portfolio.schema.ts',
-            './src/types/portfolio.ts'
-          ]
-        }
-      }
+        manualChunks: (id) => {
+          // Core dependencies
+          if (id.includes('node_modules')) {
+            if (id.includes('react') && id.includes('react-dom')) {
+              return 'vendor-react';
+            }
+            if (id.includes('framer-motion')) {
+              return 'vendor-motion';
+            }
+            if (id.includes('react-intersection-observer')) {
+              return 'vendor-intersection';
+            }
+            if (id.includes('@fortawesome')) {
+              return 'vendor-fontawesome';
+            }
+            if (id.includes('react-icons')) {
+              return 'vendor-react-icons';
+            }
+            if (id.includes('lucide-react')) {
+              return 'vendor-lucide';
+            }
+            if (id.includes('zod')) {
+              return 'vendor-validation';
+            }
+            return 'vendor-misc';
+          }
+          // Component splitting
+          if (id.includes('src/components/sections')) {
+            return 'components-sections';
+          }
+          if (id.includes('src/components')) {
+            return 'components-ui';
+          }
+          // Utilities
+          if (id.includes('src/utils') || id.includes('src/schemas') || id.includes('src/types')) {
+            return 'utils';
+          }
+        },
+      },
     },
-    // Increase chunk size warning limit temporarily to monitor
-    chunkSizeWarningLimit: 600
-  }
+    // Set chunk limit to acknowledge FontAwesome size but warn for other oversizes
+    chunkSizeWarningLimit: 1600,
+  },
 });

@@ -2,9 +2,16 @@ import React, { ReactNode } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import * as solidIcons from '@fortawesome/free-solid-svg-icons';
-import * as brandIcons from '@fortawesome/free-brands-svg-icons';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
+// Import only specific icons needed
+import {
+    faJava, faPython, faJs, faReact, faHtml5, faCss3Alt, faVuejs, faSass, faAndroid, faAppStoreIos,
+    faNodeJs, faDocker, faAws, faGitAlt, faGithub, faGitlab, faLinux, faFigma, faSketch, faPhp
+} from '@fortawesome/free-brands-svg-icons';
+import {
+    faCode, faWind, faServer, faProjectDiagram, faCodeBranch, faCloud, faDharmachakra, faCog,
+    faPaintBrush, faImage, faDrawPolygon, faCube, faUsers, faMobileAlt
+} from '@fortawesome/free-solid-svg-icons';
 import {
     SiMongodb,
     SiTypescript,
@@ -19,14 +26,21 @@ import {
     SiCockroachlabs, SiVercel, SiNetlify, SiRocket, SiXml, SiJson, SiMaterialdesign
 } from "react-icons/si";
 
-
 import portfolioData from '../../data/portfolioData.json';
 import {TbBrandKotlin} from "react-icons/tb";
 
-const getIcon = (iconName: string, type: string): IconProp | null => {
-    const icons = type === 'brands' ? brandIcons : solidIcons;
-    const icon = icons[iconName as keyof typeof icons];
-    return icon ? (icon as IconProp) : null;
+// Map of icon names to actual icon objects
+const fontAwesomeIcons: Record<string, IconProp> = {
+    // Brands
+    faJava, faPython, faJs, faReact, faHtml5, faCss3Alt, faVuejs, faSass, faAndroid, faAppStoreIos,
+    faNodeJs, faDocker, faAws, faGitAlt, faGithub, faGitlab, faLinux, faFigma, faSketch, faPhp,
+    // Solid
+    faCode, faWind, faServer, faProjectDiagram, faCodeBranch, faCloud, faDharmachakra, faCog,
+    faPaintBrush, faImage, faDrawPolygon, faCube, faUsers, faMobileAlt
+};
+
+const getIcon = (iconName: string): IconProp | null => {
+    return fontAwesomeIcons[iconName as keyof typeof fontAwesomeIcons] || null;
 };
 
 const getRSIcon = (iconName: string): ReactNode => {
@@ -126,7 +140,7 @@ export const Skills: React.FC = () => {
 
                             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
                                 {skillCategory.items.map((skill, skillIndex) => {
-                                    const icon = getIcon(skill.icon, skill.type);
+                                    const icon = skill.type === 'rsi' ? null : getIcon(skill.icon);
                                     return (
                                         <motion.div
                                             key={skillIndex}
