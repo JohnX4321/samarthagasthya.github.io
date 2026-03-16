@@ -7,9 +7,13 @@ import { Skills } from './components/sections/Skills';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
 import { Certifications } from './components/sections/Certifications';
+import { OpenSourceLicenses } from './components/sections/OpenSourceLicenses';
 import {SiGithub} from "react-icons/si";
+import { useState } from 'react';
 
 function App() {
+    const [showLicenses, setShowLicenses] = useState(false);
+
     return (
         <ThemeProvider>
             <SkipLink />
@@ -32,8 +36,16 @@ function App() {
                     <p>Find Source at {" "}<a href={"https://github.com/samarthsubramanya/samarthagasthya.github.io/"} target={"_blank"}><SiGithub className="inline-flex text-gray-700 dark:text-gray-300 group-hover:text-red-200 dark:group-hover:text-red-400 "/></a></p>
                     <p>Icons fetched from : Icons8. Logos are trademarks of their respective owners.</p>
                     <p>Few Cover Images generated using Gemini Nano Banana Pro</p>
+                    <button 
+                        onClick={() => setShowLicenses(true)}
+                        className="text-blue-600 dark:text-blue-400 hover:underline font-semibold mt-2"
+                    >
+                        View Open Source Licenses
+                    </button>
                     <p>Version : 2.0.2</p>
                 </footer>
+
+                <OpenSourceLicenses isOpen={showLicenses} onClose={() => setShowLicenses(false)} />
             </div>
         </ThemeProvider>
     );

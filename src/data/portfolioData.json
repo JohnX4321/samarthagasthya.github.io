@@ -330,7 +330,7 @@
       "category": "Embedded System",
       "description": "A kiosk to display government schemes, scholarships info, Local Wholesale Crop Sales Portal and Jobs Portal through integrated ID",
       "technologies": ["React.js","Express.js","Node.js","Python","Tkinter","Raspberry Pi","PiCamera"],
-      "image": "/images/projects/kiosk_crop.webp",
+      "image": "/images/projects/kiosk_img1.webp",
       "links": {
         "live": "https://ieeexplore.ieee.org/document/9688455",
         "github": "https://github.com/samarthsubramanya/finalproj"
@@ -453,7 +453,7 @@
       "category": "Embedded System",
       "description": "A Hand Sanitizer Dispenser which dispenses liquid sanitizer without contact. Light Eight and easy to setup.",
       "technologies": ["NextJS","Mux","MediaRecorder"],
-      "image": "/images/projects/MuxScreenRecorder.webp",
+      "image": "/images/projects/sanitizer_dispenser_1.webp",
       "links": {
         "live": "https://youtu.be/IBCRditBNsI?si=M_ohs3MzCcBGdMRA",
         "github": "#"

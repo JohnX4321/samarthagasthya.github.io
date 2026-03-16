@@ -26,11 +26,11 @@ const ProjectCard: React.FC<{ project: typeof portfolioData.projects[0]; index: 
       }`}
     >
       <motion.div style={{ y }} className="w-full md:w-1/2">
-        <div className="relative group overflow-hidden rounded-3xl shadow-2xl">
+        <div className="relative group overflow-hidden rounded-3xl shadow-2xl bg-gray-100 dark:bg-gray-700">
           <img
             src={project.image}
             alt={project.title}
-            className="w-full h-80 object-cover transition-transform duration-500 group-hover:scale-110"
+            className="w-full h-80 object-contain transition-transform duration-500 group-hover:scale-110"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
             <div className="flex gap-4">
