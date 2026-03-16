@@ -7,11 +7,9 @@ import { Skills } from './components/sections/Skills';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
 import { Certifications } from './components/sections/Certifications';
+import { OpenSourceLicenses } from './components/sections/OpenSourceLicenses';
 import {SiGithub} from "react-icons/si";
-import { useState, Suspense, lazy } from 'react';
-
-// Lazy load the licenses modal
-const OpenSourceLicenses = lazy(() => import('./components/sections/OpenSourceLicenses').then(m => ({ default: m.OpenSourceLicenses })));
+import { useState } from 'react';
 
 function App() {
     const [showLicenses, setShowLicenses] = useState(false);
@@ -47,9 +45,7 @@ function App() {
                     <p>Version : 2.0.2</p>
                 </footer>
 
-                <Suspense fallback={null}>
-                    <OpenSourceLicenses isOpen={showLicenses} onClose={() => setShowLicenses(false)} />
-                </Suspense>
+                <OpenSourceLicenses isOpen={showLicenses} onClose={() => setShowLicenses(false)} />
             </div>
         </ThemeProvider>
     );
