@@ -18,7 +18,7 @@ export const Home: React.FC = () => {
     <section
       id="home"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-16"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-20"
     >
   <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-accent-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-accent-900/20" />
 

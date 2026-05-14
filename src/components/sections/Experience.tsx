@@ -2,6 +2,8 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Briefcase, Calendar, MapPin, CheckCircle2 } from 'lucide-react';
+import { Device3DAnimation } from '../Device3DAnimation';
+import { ElectricVehicleAnimation } from '../ElectricVehicleAnimation';
 import portfolioData from '../../data/portfolioData.json';
 
 export const Experience: React.FC = () => {
@@ -31,12 +33,12 @@ export const Experience: React.FC = () => {
 
           <div className="space-y-12">
             {portfolioData.experience.map((exp, index) => (
-              <motion.div
-                key={exp.id}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                animate={inView ? { opacity: 1, x: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                className={`relative flex flex-col md:flex-row gap-8 items-center ${
+              <React.Fragment key={exp.id}>
+                <motion.div
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                  animate={inView ? { opacity: 1, x: 0 } : {}}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  className={`relative flex flex-col md:flex-row gap-8 items-center ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
               >
@@ -127,8 +129,29 @@ export const Experience: React.FC = () => {
                   </motion.div>
                 </div>
 
-                <div className="w-full md:w-[calc(50%-2rem)]" />
+                <div className="w-full md:w-[calc(50%-2rem)]">
+                  {exp.id === 3 ? (
+                    <div className="flex flex-col items-center justify-center h-full gap-3">
+                      <img src="/images/ev_scooter.webp" alt="EV Scooter" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
+                        AI generated image for illustration purposes only
+                      </p>
+                    </div>
+                  ) : exp.id === 4 ? (
+                    <div className="flex items-center justify-center h-full">
+                      <Device3DAnimation />
+                    </div>
+                  ) : exp.id === 5 ?(
+                    <div className="flex flex-col items-center justify-center h-full gap-3">
+                      <img src="/images/edtech.webp" alt="EdTech VR" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
+                        AI generated image for illustration purposes only
+                      </p>
+                    </div>
+                  ) : null}
+                </div>
               </motion.div>
+              </React.Fragment>
             ))}
           </div>
         </div>

@@ -21,10 +21,11 @@
       "institution": "Arizona State University",
       "location": "Tempe, AZ, USA",
       "period": "2025 - 2027*",
-      "gpa": "3.8/4.0",
+      "gpa": "4.0/4.0",
       "highlights": [
-        "Focus on Systems engineereering and AI/ML",
-        "Important courses: Distributed Systems, Reconfigurable Computing, Statistical Learning Theory"
+        "Focus on Systems engineering and AI/ML",
+        "Important courses: Distributed Systems, Reconfigurable Computing, Statistical Learning Theory",
+        "Computer Architecture, Blockchain, Algorithms"
       ]
     },
     {
@@ -149,11 +150,13 @@
       "company": "Herberger Institute for Design and the Arts, ASU",
       "url" :  "https://www.asu.edu",
       "location": "Tempe, AZ, USA",
-      "period": "Feb 2026 - Present",
+      "period": "Feb 2026 - May 2026",
       "type": "Part-time",
       "description": "Conduct research on data visualization patterns and human-computer interaction design principles",
       "achievements": [
-        "Working on Data Visualization Projects to channel nature data into physical form"
+        "Working on Data Visualization Projects to channel environmetal data into physical form",
+        "Build Embedded Devices, Train ML Models based on historical Data, Integrate Real-time AI for Data Prediction on Raspberry Pi",
+        "Design Circuitry and connections, Optimize code for lower power and efficiency, Document research and findings"
       ]
     },
     {
@@ -164,7 +167,7 @@
       "location": "Tempe, AZ, USA",
       "period": "Sep 2025 - Feb 2026",
       "type": "Part-time",
-      "description": "Teaching Assistant for College Mathematics and College Algebra courses; managed student submissions, graded assignments, and held office hours",
+      "description": "Instructional Assistant for College Mathematics and College Algebra courses; managed student submissions, graded assignments, and held office hours",
       "achievements": [
         "Supported 10+ classrooms with Math classes",
         "Assist multiple students with queries and doubts related to course material and assignments"
