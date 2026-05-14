@@ -7,6 +7,7 @@ import { Skills } from './components/sections/Skills';
 import { Experience } from './components/sections/Experience';
 import { Projects } from './components/sections/Projects';
 import { Certifications } from './components/sections/Certifications';
+import { Contact } from './components/sections/Contact';
 import { OpenSourceLicenses } from './components/sections/OpenSourceLicenses';
 import {SiGithub} from "react-icons/si";
 import { useState } from 'react';
@@ -28,6 +29,7 @@ function App() {
                     <Experience />
                     <Projects />
                     <Certifications />
+                    <Contact />
                 </main>
 
                 <footer className="bg-gray-100 dark:bg-gray-950 py-8 text-center text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800">

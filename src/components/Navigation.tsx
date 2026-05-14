@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Home, GraduationCap, Code, Briefcase, FolderGit2, Award } from 'lucide-react';
+import { Home, GraduationCap, Code, Briefcase, FolderGit2, Award, Mail } from 'lucide-react';
 
 const navItems = [
   { id: 'home', label: 'Home', icon: Home },
@@ -9,6 +9,7 @@ const navItems = [
   { id: 'experience', label: 'Experience', icon: Briefcase },
   { id: 'projects', label: 'Projects', icon: FolderGit2 },
   { id: 'certifications', label: 'Certifications', icon: Award },
+  { id: 'contact', label: 'Contact', icon: Mail },
 ];
 
 export const Navigation: React.FC = () => {
