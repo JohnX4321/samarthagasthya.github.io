@@ -12,6 +12,7 @@ export default defineConfig({
     cssCodeSplit: true,
     sourceMap: false, // Disable source maps in production to reduce bundle size
     minify: 'esbuild', // Use esbuild (default, faster)
+    reportCompressedSize: false, // Skip reporting compressed size to speed up build
     rollupOptions: {
       output: {
         manualChunks: (id) => {
@@ -54,7 +55,7 @@ export default defineConfig({
         },
       },
     },
-    // Set chunk limit to acknowledge FontAwesome size but warn for other oversizes
-    chunkSizeWarningLimit: 1600,
+    // Set chunk limit - balanced for performance
+    chunkSizeWarningLimit: 2000,
   },
 });

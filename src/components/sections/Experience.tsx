@@ -132,7 +132,7 @@ export const Experience: React.FC = () => {
                 <div className="w-full md:w-[calc(50%-2rem)]">
                   {exp.id === 3 ? (
                     <div className="flex flex-col items-center justify-center h-full gap-3">
-                      <img src="/images/ev_scooter.webp" alt="EV Scooter" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <img loading="lazy" src="/images/ev_scooter.webp" alt="EV Scooter" className="w-full max-w-sm rounded-2xl shadow-lg" />
                       <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
                         AI generated image for illustration purposes only
                       </p>
@@ -143,7 +143,7 @@ export const Experience: React.FC = () => {
                     </div>
                   ) : exp.id === 5 ?(
                     <div className="flex flex-col items-center justify-center h-full gap-3">
-                      <img src="/images/edtech.webp" alt="EdTech VR" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <img loading="lazy" src="/images/edtech.webp" alt="EdTech VR" className="w-full max-w-sm rounded-2xl shadow-lg" />
                       <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
                         AI generated image for illustration purposes only
                       </p>

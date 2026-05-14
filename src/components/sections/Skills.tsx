@@ -1,106 +1,75 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconProp } from '@fortawesome/fontawesome-svg-core';
-// Import only specific icons needed
-import {
-    faJava, faPython, faJs, faReact, faHtml5, faCss3Alt, faVuejs, faSass, faAndroid, faAppStoreIos,
-    faNodeJs, faDocker, faAws, faGitAlt, faGithub, faGitlab, faLinux, faFigma, faSketch, faPhp
-} from '@fortawesome/free-brands-svg-icons';
-import {
-    faCode, faWind, faServer, faProjectDiagram, faCodeBranch, faCloud, faDharmachakra, faCog,
-    faPaintBrush, faImage, faDrawPolygon, faCube, faUsers, faMobileAlt
-} from '@fortawesome/free-solid-svg-icons';
-import {
-    SiMongodb,
-    SiTypescript,
-    SiRust,
-    SiC,
-    SiCplusplus,
-    SiKotlin,
-    SiSharp,
-    SiDart,
-    SiSwift,
-    SiApachecordova, SiFlutter, SiJetpackcompose, SiUnity, SiUnrealengine, SiPostgresql, SiMysql, SiNeo4J, SiRealm,
-    SiCockroachlabs, SiVercel, SiNetlify, SiRocket, SiXml, SiJson, SiMaterialdesign
-} from "react-icons/si";
 
 import portfolioData from '../../data/portfolioData.json';
-import {TbBrandKotlin} from "react-icons/tb";
 
-// Map of icon names to actual icon objects
-const fontAwesomeIcons: Record<string, IconProp> = {
-    // Brands
-    faJava, faPython, faJs, faReact, faHtml5, faCss3Alt, faVuejs, faSass, faAndroid, faAppStoreIos,
-    faNodeJs, faDocker, faAws, faGitAlt, faGithub, faGitlab, faLinux, faFigma, faSketch, faPhp,
-    // Solid
-    faCode, faWind, faServer, faProjectDiagram, faCodeBranch, faCloud, faDharmachakra, faCog,
-    faPaintBrush, faImage, faDrawPolygon, faCube, faUsers, faMobileAlt
+// Map FontAwesome icon names to SVG file paths
+const iconMap: Record<string, string> = {
+    'faJava': '/icons/java.svg',
+    'faPython': '/icons/python.svg',
+    'faJs': '/icons/javascript.svg',
+    'faReact': '/icons/react.svg',
+    'faHtml5': '/icons/html5.svg',
+    'faCss3Alt': '/icons/css.svg',
+    'faVuejs': '/icons/vuejs.svg',
+    'faSass': '/icons/sass.svg',
+    'faAndroid': '/icons/android.svg',
+    'faAppStoreIos': '/icons/ios.svg',
+    'faNodeJs': '/icons/nodejs.svg',
+    'faDocker': '/icons/docker.svg',
+    'faAws': '/icons/aws.svg',
+    'faGitAlt': '/icons/git.svg',
+    'faGithub': '/icons/github.svg',
+    'faGitlab': '/icons/gitlab.svg',
+    'faLinux': '/icons/linux.svg',
+    'faFigma': '/icons/figma.svg',
+    'faSketch': '/icons/sketch.svg',
+    'faPhp': '/icons/php.svg',
+    'faCode': '/icons/nextjs.svg',
+    'faWind': '/icons/tailwindcss.svg',
+    'faServer': '/icons/redux.svg',
+    'faTS': '/icons/typescript.svg',
+    'faRust': '/icons/rust.svg',
+    'faC': '/icons/c.svg',
+    'faCpp': '/icons/cplusplus.svg',
+    'faKotlin': '/icons/kotlin.svg',
+    'faCSharp': '/icons/csharp.svg',
+    'faDart': '/icons/dart.svg',
+    'faSwift': '/icons/swift.svg',
+    'faCordova': '/icons/cordova.svg',
+    'faFlutter': '/icons/flutter.svg',
+    'faJetpackCompose': '/icons/jetpack-compose.svg',
+    'faKMM': '/icons/jetpack-compose.svg',
+    'faUnity': '/icons/unity.svg',
+    'faUnreal': '/icons/unreal.svg',
+    'faMongo': '/icons/mongodb.svg',
+    'faPSQL': '/icons/postgresql.svg',
+    'faMysql': '/icons/mysql.svg',
+    'faNeo': '/icons/neo4j.svg',
+    'faRealm': '/icons/realm.svg',
+    'faCDB': '/icons/cockroachdb.svg',
+    'faVercel': '/icons/vercel.svg',
+    'faNetlify': '/icons/netlify.svg',
+    'faXML': '/icons/xml.svg',
+    'faJSON': '/icons/json.svg',
+    'faMaterial': '/icons/materialdesign.svg',
+    'faProjectDiagram': '/icons/project-diagram.svg',
+    'faCodeBranch': '/icons/code-branch.svg',
+    'faCloud': '/icons/cloud.svg',
+    'faDharmachakra': '/icons/kubernetes.svg',
+    'faCog': '/icons/cog.svg',
+    'faPaintBrush': '/icons/paintbrush.svg',
+    'faImage': '/icons/image.svg',
+    'faDrawPolygon': '/icons/draw-polygon.svg',
+    'faCube': '/icons/cube.svg',
+    'faUsers': '/icons/users.svg',
+    'faMobileAlt': '/icons/mobile.svg',
 };
 
-const getIcon = (iconName: string): IconProp | null => {
-    return fontAwesomeIcons[iconName as keyof typeof fontAwesomeIcons] || null;
-};
+const DEFAULT_ICON = '/icons/code.svg';
 
-const getRSIcon = (iconName: string): ReactNode => {
-    const iconClass = "text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300";
-    
-    switch (iconName) {
-        case 'faTS':
-            return <SiTypescript className={iconClass} />;
-        case 'faRust':
-            return <SiRust className={iconClass} />;
-        case 'faC':
-            return <SiC className={iconClass} />;
-        case 'faCpp':
-            return <SiCplusplus className={iconClass} />;
-        case 'faKotlin':
-            return <SiKotlin className={iconClass} />;
-        case 'faCSharp':
-            return <SiSharp className={iconClass} />;
-        case 'faDart':
-            return <SiDart className={iconClass} />;
-        case 'faSwift':
-            return <SiSwift className={iconClass} />;
-        case 'faCordova':
-            return <SiApachecordova className={iconClass} />;
-        case 'faFlutter':
-            return <SiFlutter className={iconClass} />;
-        case 'faJetpackCompose':
-            return <SiJetpackcompose className={iconClass} />;
-        case 'faKMM':
-            return <TbBrandKotlin className={iconClass} />;
-        case 'faUnity':
-            return <SiUnity className={iconClass} />;
-        case 'faUnreal':
-            return <SiUnrealengine className={iconClass} />;
-        case 'faMongo':
-            return <SiMongodb className={iconClass} />;
-        case 'faPSQL':
-            return <SiPostgresql className={iconClass} />;
-        case 'faMysql':
-            return <SiMysql className={iconClass} />;
-        case 'faNeo':
-            return <SiNeo4J className={iconClass} />;
-        case 'faRealm':
-            return <SiRealm className={iconClass} />;
-        case 'faCDB':
-            return <SiCockroachlabs className={iconClass} />;
-        case 'faVercel':
-            return <SiVercel className={iconClass} />;
-        case 'faNetlify':
-            return <SiNetlify className={iconClass} />;
-        case 'faXML':
-            return <SiXml className={iconClass} />;
-        case 'faJSON':
-            return <SiJson className={iconClass} />;
-        case 'faMaterial':
-            return <SiMaterialdesign className={iconClass} />;
-        default:
-            return <SiRocket className={iconClass} />;
-    }
-};
+
 
 export const Skills: React.FC = () => {
     const [ref, inView] = useInView({
@@ -140,7 +109,7 @@ export const Skills: React.FC = () => {
 
                             <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6">
                                 {skillCategory.items.map((skill, skillIndex) => {
-                                    const icon = skill.type === 'rsi' ? null : getIcon(skill.icon);
+                                    const iconPath = iconMap[skill.icon] || DEFAULT_ICON;
                                     return (
                                         <motion.div
                                             key={skillIndex}
@@ -156,18 +125,11 @@ export const Skills: React.FC = () => {
                                             className="group relative"
                                         >
                                             <div className="flex flex-col items-center justify-center p-4 rounded-2xl bg-white dark:bg-gray-800 neomorph-icon hover:shadow-xl transition-all duration-300 cursor-pointer">
-                                                {
-                                                    skill.type === 'rsi' ? (
-                                                        getRSIcon(skill.icon)
-                                                    ) : icon ? (
-                                                        <FontAwesomeIcon
-                                                            icon={icon}
-                                                            className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300"
-                                                        />
-                                                    ) : (
-                                                        <SiRocket className="text-4xl text-gray-700 dark:text-gray-300 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300" />
-                                                    )
-                                                }
+                                                <img 
+                                                    src={iconPath}
+                                                    alt={skill.name}
+                                                    className="w-12 h-12 invert"
+                                                />
                                                 <span className="text-xs font-medium text-gray-600 dark:text-gray-400 mt-2 text-center leading-tight group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                           {skill.name}
                         </span>

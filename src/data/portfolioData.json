@@ -49,9 +49,9 @@
       "category": "Programming Languages",
       "items": [
         { "name": "Kotlin", "icon": "faKotlin", "type": "rsi" },
-        { "name": "Java", "icon": "faJava", "type": "brands" },
-        { "name": "Python", "icon": "faPython", "type": "brands" },
-        { "name": "JavaScript", "icon": "faJs", "type": "brands" },
+        { "name": "Java", "icon": "faJava", "type": "rsi" },
+        { "name": "Python", "icon": "faPython", "type": "rsi" },
+        { "name": "JavaScript", "icon": "faJs", "type": "rsi" },
         { "name": "TypeScript", "icon": "faTS", "type": "rsi" },
         { "name": "Rust", "icon": "faRust", "type": "rsi" },
         { "name": "C", "icon": "faC", "type": "rsi" },
@@ -59,28 +59,28 @@
         { "name": "Swift", "icon": "faSwift", "type": "rsi" },
         { "name": "C#", "icon": "faCSharp", "type": "rsi" },
         { "name": "Dart", "icon": "faDart", "type": "rsi" },
-        { "name": "PHP", "icon": "faPhp", "type": "brands" }
+        { "name": "PHP", "icon": "faPhp", "type": "rsi" }
       ]
     },
     {
       "category": "Frontend Development",
       "items": [
-        { "name": "React", "icon": "faReact", "type": "brands" },
-        { "name": "Next.js", "icon": "faCode", "type": "solid" },
-        { "name": "HTML5", "icon": "faHtml5", "type": "brands" },
-        { "name": "CSS3", "icon": "faCss3Alt", "type": "brands" },
-        { "name": "Tailwind CSS", "icon": "faWind", "type": "solid" },
-        { "name": "Vue.js", "icon": "faVuejs", "type": "brands" },
-        { "name": "Redux", "icon": "faServer", "type": "solid" },
-        { "name": "Sass", "icon": "faSass", "type": "brands" }
+        { "name": "React", "icon": "faReact", "type": "rsi" },
+        { "name": "Next.js", "icon": "faCode", "type": "rsi" },
+        { "name": "HTML5", "icon": "faHtml5", "type": "rsi" },
+        { "name": "CSS3", "icon": "faCss3Alt", "type": "rsi" },
+        { "name": "Tailwind CSS", "icon": "faWind", "type": "rsi" },
+        { "name": "Vue.js", "icon": "faVuejs", "type": "rsi" },
+        { "name": "Redux", "icon": "faServer", "type": "rsi" },
+        { "name": "Sass", "icon": "faSass", "type": "rsi" }
       ]
     },
     {
       "category": "Mobile Development",
       "items": [
-        { "name": "React Native", "icon": "faReact", "type": "brands" },
-        { "name": "Android", "icon": "faAndroid", "type": "brands" },
-        { "name": "iOS", "icon": "faAppStoreIos", "type": "brands" },
+        { "name": "React Native", "icon": "faReact", "type": "rsi" },
+        { "name": "Android", "icon": "faAndroid", "type": "rsi" },
+        { "name": "iOS", "icon": "faAppStoreIos", "type": "rsi" },
         { "name": "Cordova", "icon": "faCordova", "type": "rsi" },
         { "name": "Flutter", "icon": "faAndroid", "type": "rsi" },
         { "name": "Compose", "icon": "faJetpackCompose", "type": "rsi" },
@@ -103,11 +103,11 @@
     {
       "category": "Backend Development",
       "items": [
-        { "name": "Node.js", "icon": "faNodeJs", "type": "brands" },
-        { "name": "GraphQL", "icon": "faProjectDiagram", "type": "solid" },
-        { "name": "Express", "icon": "faServer", "type": "solid" },
-        { "name": "Django", "icon": "faCodeBranch", "type": "solid" },
-        { "name": "REST API", "icon": "faCloud", "type": "solid" },
+        { "name": "Node.js", "icon": "faNodeJs", "type": "rsi" },
+        { "name": "GraphQL", "icon": "faProjectDiagram", "type": "rsi" },
+        { "name": "Express", "icon": "faServer", "type": "rsi" },
+        { "name": "Django", "icon": "faCodeBranch", "type": "rsi" },
+        { "name": "REST API", "icon": "faCloud", "type": "rsi" },
         { "name": "XML", "icon": "faXML", "type": "rsi" },
         { "name": "JSON", "icon": "faJSON", "type": "rsi" }
       ]
@@ -115,15 +115,15 @@
     {
       "category": "DevOps & Tools",
       "items": [
-        { "name": "Docker", "icon": "faDocker", "type": "brands" },
-        { "name": "AWS", "icon": "faAws", "type": "brands" },
-        { "name": "Git", "icon": "faGitAlt", "type": "brands" },
-        { "name": "GitHub", "icon": "faGithub", "type": "brands" },
-        { "name": "GitLab", "icon": "faGitlab", "type": "brands" },
-        { "name": "Kubernetes", "icon": "faDharmachakra", "type": "solid" },
-        { "name": "Linux", "icon": "faLinux", "type": "brands" },
-        { "name": "Nginx", "icon": "faServer", "type": "solid" },
-        { "name": "Terraform", "icon": "faCog", "type": "solid" },
+        { "name": "Docker", "icon": "faDocker", "type": "rsi" },
+        { "name": "AWS", "icon": "faAws", "type": "rsi" },
+        { "name": "Git", "icon": "faGitAlt", "type": "rsi" },
+        { "name": "GitHub", "icon": "faGithub", "type": "rsi" },
+        { "name": "GitLab", "icon": "faGitlab", "type": "rsi" },
+        { "name": "Kubernetes", "icon": "faDharmachakra", "type": "rsi" },
+        { "name": "Linux", "icon": "faLinux", "type": "rsi" },
+        { "name": "Nginx", "icon": "faServer", "type": "rsi" },
+        { "name": "Terraform", "icon": "faCog", "type": "rsi" },
         { "name": "Vercel", "icon": "faVercel", "type": "rsi" },
         { "name": "Netlify", "icon": "faNetlify", "type": "rsi" }
       ]
@@ -131,14 +131,14 @@
     {
       "category": "Design & UI/UX",
       "items": [
-        { "name": "Figma", "icon": "faFigma", "type": "brands" },
-        { "name": "Adobe XD", "icon": "faPaintBrush", "type": "solid" },
-        { "name": "Sketch", "icon": "faSketch", "type": "brands" },
-        { "name": "Photoshop", "icon": "faImage", "type": "solid" },
-        { "name": "Wireframing", "icon": "faDrawPolygon", "type": "solid" },
-        { "name": "Prototyping", "icon": "faCube", "type": "solid" },
-        { "name": "User Testing", "icon": "faUsers", "type": "solid" },
-        { "name": "Responsive Design", "icon": "faMobileAlt", "type": "solid" },
+        { "name": "Figma", "icon": "faFigma", "type": "rsi" },
+        { "name": "Adobe XD", "icon": "faPaintBrush", "type": "rsi" },
+        { "name": "Sketch", "icon": "faSketch", "type": "rsi" },
+        { "name": "Photoshop", "icon": "faImage", "type": "rsi" },
+        { "name": "Wireframing", "icon": "faDrawPolygon", "type": "rsi" },
+        { "name": "Prototyping", "icon": "faCube", "type": "rsi" },
+        { "name": "User Testing", "icon": "faUsers", "type": "rsi" },
+        { "name": "Responsive Design", "icon": "faMobileAlt", "type": "rsi" },
         { "name": "Material Theme", "icon": "faMaterial", "type": "rsi" }
       ]
     }
