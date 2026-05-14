@@ -130,7 +130,23 @@ export const Experience: React.FC = () => {
                 </div>
 
                 <div className="w-full md:w-[calc(50%-2rem)]">
-                  {exp.id === 3 ? (
+                  { exp.id === 1 ?(
+                    <div className="flex flex-col items-center justify-center h-full gap-3">
+                      <img loading="lazy" src="/images/hci.webp" alt="HCIS" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
+                        AI generated image for illustration purposes only
+                      </p>
+                    </div>
+                  ) : 
+                  exp.id === 2 ?(
+                    <div className="flex flex-col items-center justify-center h-full gap-3">
+                      <img loading="lazy" src="/images/gia.webp" alt="Math IA" className="w-full max-w-sm rounded-2xl shadow-lg" />
+                      <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">
+                        AI generated image for illustration purposes only
+                      </p>
+                    </div>
+                  ) :
+                  exp.id === 3 ? (
                     <div className="flex flex-col items-center justify-center h-full gap-3">
                       <img loading="lazy" src="/images/ev_scooter.webp" alt="EV Scooter" className="w-full max-w-sm rounded-2xl shadow-lg" />
                       <p className="text-xs text-gray-500 dark:text-gray-400 italic text-center">

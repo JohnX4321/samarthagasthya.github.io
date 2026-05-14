@@ -1,7 +1,7 @@
 {
   "personal": {
     "name": "Samarth Agasthya M S",
-    "title": "Full-Stack Engineer | Mobile Specialist | AI/ML Enthusiast",
+    "title": "Full-Stack Engineer | Mobile Applications Specialist | AI/ML Enthusiast",
     "tagline": "Pursuing MSCS @ ASU | 4+ YOE Building Scalable Applications",
     "bio": "Mobile-first full-stack engineer with 4+ years building production systems at Ather Energy and 42Gears. Specialized in native Android/Kotlin and cross-platform development. Currently exploring AI/ML and distributed systems. Published developer and Mentor",
     "email": "ms.samarth43@gmail.com",
@@ -248,7 +248,7 @@
       "location": "Bengaluru India",
       "period": "Mar 2020 - Jun 2020",
       "type": "Internship",
-      "description": "Contribute to VR Capable E-Learning Platform",
+      "description": "Contribute to Multiple Applications for clients in D2C and B2B space",
       "achievements": [
         "Developed Mobile application for e-commerce Laundry Platform with PHP Backend",
 
@@ -604,6 +604,39 @@
       "description": "Professional certificate from industry leader Qualcomm covering AI technical foundations, neural networks, on-device AI, and practical implementation. Demonstrates current AI industry knowledge.",
       "skills": ["Qualcomm","AI"],
       "badgeUrl": "https://www.credly.com/badges/9cc28355-4ee2-4fd3-89a2-98018f2f13b7"
+    },
+    {
+      "id": 13,
+      "name": "Google AI Professional",
+      "provider": "Google AI",
+      "issuer": "Google",
+      "date": "May 2026",
+      "credentialId": "",
+      "description": "Professional certificate Google through Coursera to validate knowledge in using AI for various multi-modal use cases",
+      "skills": ["Google","AI"],
+      "badgeUrl": "https://www.credly.com/badges/b963aa57-140f-4f29-9e98-f59c76bc38ce/public_url"
+    },
+     {
+      "id": 14,
+      "name": "Ai Engineering",
+      "provider": "ZeroToMastery",
+      "issuer": "ZTM",
+      "date": "May 2026",
+      "credentialId": "",
+      "description": "Hands-on Learning on AI engineering skills covering Lora, langchain, langgraph, etc",
+      "skills": ["ZTM","AI","LangChain"],
+      "badgeUrl": "https://media.licdn.com/dms/image/v2/D5622AQFe-mSzuwucXA/feedshare-shrink_1280/B56Z4jOtSyH4AM-/0/1778707519600?e=1780531200&v=beta&t=f-tO1lDBA6WUnLi4wiR_iz4NIqW8205S2H13jjhMz2U"
+    },
+    {
+      "id": 15,
+      "name": "AI110 - Foundations of AI Engineering",
+      "provider": "CodePath",
+      "issuer": "CodePath",
+      "date": "May 2026",
+      "credentialId": "",
+      "description": "A weekly Live Course with 4 projects dedicated to understanding concepts of AI, AI-assisted development, debugging, testing and development of AI-integrated smart applications taught by industry veterans",
+      "skills": ["CodePath","AI","RAG","LLM"],
+      "badgeUrl": "https://media.licdn.com/dms/image/v2/D4D22AQGvXz10PNWvTw/feedshare-image-high-res/B4DZ4fShviHoAU-/0/1778641411372?e=1780531200&v=beta&t=BFpA7EEV7sp0dALl75z_-lY7vjcTTyRmrV6POg0UO2k"
     }
     
   ],
