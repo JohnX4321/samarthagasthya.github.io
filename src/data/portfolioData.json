@@ -146,6 +146,19 @@
   "experience": [
     {
       "id": 1,
+      "title": "Software Engineering Intern",
+      "company": "Rivian and Volkswage Group Technologies",
+      "url" :  "https://www.rivianvw.tech",
+      "location": "Palo Alto, CA, USA",
+      "period": "May 2026 - Aug 2026",
+      "type": "Full-time",
+      "description": "Work on Infotainment and Connected Device Experience for Software Defined Vehicle",
+      "achievements": [
+        "WIP"
+      ]
+    },
+    {
+      "id": 2,
       "title": "Human Computer Interaction Specialist (Research)",
       "company": "Herberger Institute for Design and the Arts, ASU",
       "url" :  "https://www.asu.edu",
@@ -160,7 +173,7 @@
       ]
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Instructional Assistant and Grader",
       "company": "School of Mathematics & Statistical Sciences, ASU",
       "url" :  "https://www.asu.edu",
@@ -174,7 +187,7 @@
       ]
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Application Developer - Android Applications",
       "url": "https://atherenergy.com",
       "company": "Ather Energy Ltd",
@@ -198,7 +211,7 @@
       ]
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Member of Technical Staff",
       "company": "42Gears Mobility Systems Pvt Ltd",
       "url": "https://42gears.com",
@@ -224,7 +237,7 @@
       ]
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Application Developer Intern",
       "company": "Vrook Inc",
       "url" :  "https://vrook.co",
@@ -241,7 +254,7 @@
       ]
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Android Developer Intern",
       "company": "Dwaiampayana Technologies",
       "url" :  "",
@@ -260,7 +273,7 @@
       ]
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Intern",
       "company": "Pantech Learning",
       "url" :  "",
@@ -273,7 +286,7 @@
       ]
     },
     {
-      "id": 8,
+      "id": 9,
       "title": "Java Developer Intern",
       "company": "Eckovation",
       "url" : "",

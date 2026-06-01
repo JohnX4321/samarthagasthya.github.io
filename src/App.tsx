@@ -1,5 +1,7 @@
 import { ThemeProvider } from './context/ThemeContext';
 import { SkipLink } from './components/SkipLink';
+import { MobileRedirectModal } from './components/MobileRedirectModal';
+import { MobileRedirectFAB } from './components/MobileRedirectFAB';
 import { Navigation } from './components/Navigation';
 import { Home } from './components/sections/Home';
 import { Education } from './components/sections/Education';
@@ -18,6 +20,8 @@ function App() {
     return (
         <ThemeProvider>
             <SkipLink />
+            <MobileRedirectModal />
+            <MobileRedirectFAB />
             <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300 overflow-x-hidden">
                 <Navigation />
                 {/* <ThemeToggle /> */}
