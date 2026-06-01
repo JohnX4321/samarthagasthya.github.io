@@ -24,12 +24,17 @@
       // Mobile redirect - check at earliest possible point (in head, before body renders)
       (function() {
         const userAgent = navigator.userAgent || '';
-        const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone/i.test(userAgent);
+        const isMobile = /iPhone|iPad|iPod|Android|webOS|BlackBerry|Windows Phone|Opera Mini/i.test(userAgent);
         const currentHost = window.location.host;
         
         if (isMobile && !currentHost.includes('m.samarthagasthya.dev')) {
           // Show loading state during redirect
-          document.documentElement.innerHTML = '<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Redirecting...</title><style>body{margin:0;padding:0;display:flex;align-items:center;justify-content:center;height:100vh;background:#f3f4f6;font-family:system-ui}.loader{display:flex;flex-direction:column;align-items:center}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.spinner{width:40px;height:40px;border:4px solid #e5e7eb;border-top:4px solid #3b82f6;border-radius:50%;animation:spin 1s linear infinite}p{margin-top:16px;color:#6b7280}</style></head><body><div class="loader"><div class="spinner"></div><p>Redirecting to mobile version...</p></div><script>setTimeout(function(){window.location.replace("https://m.samarthagasthya.dev"+window.location.pathname+window.location.search);},200)<\/script></body></html>';
+          const loadingHTML = '<style>body{margin:0;padding:0;display:flex;align-items:center;justify-content:center;height:100vh;background:#f3f4f6;font-family:system-ui,-apple-system,sans-serif}.loader{display:flex;flex-direction:column;align-items:center}@keyframes spin{0%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.spinner{width:40px;height:40px;border:4px solid #e5e7eb;border-top:4px solid #3b82f6;border-radius:50%;animation:spin 1s linear infinite}p{margin-top:16px;color:#6b7280;text-align:center}</style><div class="loader"><div class="spinner"></div><p>Redirecting to mobile version...</p></div>';
+          document.body.innerHTML = loadingHTML;
+          
+          // Redirect immediately
+          const redirectUrl = 'https://m.samarthagasthya.dev' + (window.location.pathname || '/') + (window.location.search || '');
+          window.location.replace(redirectUrl);
         }
       })();
     </script>
