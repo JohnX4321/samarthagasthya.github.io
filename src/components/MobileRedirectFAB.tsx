@@ -35,11 +35,10 @@ export function MobileRedirectFAB() {
       {/* FAB Button */}
       <div className="relative">
         {/* Pulse background effect */}
-        <div className="absolute inset-0 bg-blue-600 rounded-full animate-pulse opacity-75" />
+        <div className="absolute inset-0 bg-neutral-900 dark:bg-neutral-100 rounded-full animate-pulse opacity-50" />
         
-        {/* Main button */}
-        <div className="relative w-14 h-14 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-full shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center cursor-pointer">
-          <Smartphone size={24} className="text-white" strokeWidth={2} />
+        <div className="relative w-14 h-14 bg-neutral-900 dark:bg-neutral-100 hover:bg-neutral-800 dark:hover:bg-neutral-200 rounded-full border border-neutral-200 dark:border-neutral-700 transition-all duration-200 flex items-center justify-center cursor-pointer">
+          <Smartphone size={24} className="text-white dark:text-neutral-900" strokeWidth={2} />
         </div>
       </div>
     </button>

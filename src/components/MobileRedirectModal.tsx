@@ -85,7 +85,7 @@ export function MobileRedirectModal() {
           </button>
           <button
             onClick={handleRedirect}
-            className="flex-1 px-4 py-2.5 text-white bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition-colors"
+            className="flex-1 px-4 py-2.5 btn-primary rounded-lg text-sm transition-colors"
           >
             Go to Mobile Site
           </button>

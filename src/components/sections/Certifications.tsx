@@ -29,7 +29,7 @@ export const Certifications: React.FC = () => {
   }, [selectedProvider]);
 
   return (
-    <section id="certifications" className="min-h-screen py-20 px-6 bg-gray-50 dark:bg-gray-900">
+    <section id="certifications" className="min-h-screen py-20 px-6 bg-white dark:bg-neutral-900">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           ref={ref}
@@ -38,11 +38,11 @@ export const Certifications: React.FC = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-12"
         >
-          <h2 className="text-5xl font-bold mb-4 text-gray-900 dark:text-white">
+          <h2 className="text-4xl font-bold mb-4 tracking-tight text-neutral-900 dark:text-neutral-50">
             Certifications
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-accent-600 mx-auto rounded-full" />
-          <p className="mt-4 text-gray-600 dark:text-gray-400 text-lg max-w-2xl mx-auto">
+          <div className="section-divider" />
+          <p className="mt-4 text-neutral-500 dark:text-neutral-400 text-sm max-w-xl mx-auto">
             Professional certifications and continuous learning achievements
           </p>
         </motion.div>
@@ -54,27 +54,26 @@ export const Certifications: React.FC = () => {
           className="mb-12"
         >
           <div className="flex items-center justify-center gap-3 mb-6">
-            <Filter className="w-5 h-5 text-gray-600 dark:text-gray-400" />
-            <span className="text-gray-700 dark:text-gray-300 font-semibold">
-              Filter by Provider:
+            <Filter className="w-4 h-4 text-neutral-500" />
+            <span className="text-neutral-600 dark:text-neutral-400 text-sm font-medium">
+              Filter by Provider
             </span>
           </div>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="flex flex-wrap justify-center gap-2">
             {providers.map((provider) => (
               <motion.button
                 key={provider}
                 onClick={() => setSelectedProvider(provider)}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                className={`px-6 py-3 rounded-full font-medium transition-all ${
+                whileTap={{ scale: 0.98 }}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
                   selectedProvider === provider
-                    ? 'bg-gradient-to-r from-blue-600 to-accent-600 text-white shadow-lg'
-                    : 'bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:shadow-md neomorph-card'
+                    ? 'btn-primary'
+                    : 'border border-neutral-200 dark:border-neutral-700 text-neutral-600 dark:text-neutral-400 hover:border-neutral-300 dark:hover:border-neutral-600'
                 }`}
               >
                 {provider}
                 {provider !== 'All' && (
-                  <span className="ml-2 px-2 py-0.5 bg-white/20 rounded-full text-xs">
+                  <span className="ml-2 text-xs opacity-70">
                     {portfolioData.certifications.filter((c) => c.provider === provider).length}
                   </span>
                 )}
@@ -90,81 +89,54 @@ export const Certifications: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16"
+            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16"
           >
-          {filteredCertifications.map((cert, index) => (
+            {filteredCertifications.map((cert, index) => (
               <motion.div
                 key={cert.id}
-                initial={{ opacity: 0, y: 30, rotateY: -20 }}
-                animate={inView ? { opacity: 1, y: 0, rotateY: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -10, rotateY: 5 }}
-                className="neomorph-card bg-white dark:bg-gray-800 rounded-3xl p-6 hover:shadow-2xl transition-all duration-300 group relative"
+                initial={{ opacity: 0, y: 20 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="neomorph-card rounded-2xl p-6 transition-colors duration-300 group"
               >
-                <div className="relative">
-                  <motion.div
-                    whileHover={{ rotate: 360, scale: 1.1 }}
-                    transition={{ duration: 0.6 }}
-                    className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-yellow-400 via-orange-500 to-red-500 rounded-2xl flex items-center justify-center neomorph-icon"
-                  >
-                    <Award className="w-8 h-8 text-white" />
-                  </motion.div>
-
-                  <motion.div
-                    className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-2 opacity-0 group-hover:opacity-100 transition-opacity"
-                    animate={{
-                      y: [0, -10, 0],
-                    }}
-                    transition={{
-                      duration: 2,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                  >
-                    <div className="text-4xl">🏆</div>
-                  </motion.div>
+                <div className="w-12 h-12 mx-auto mb-4 bg-neutral-900 dark:bg-neutral-100 rounded-xl flex items-center justify-center">
+                  <Award className="w-6 h-6 text-white dark:text-neutral-900" />
                 </div>
 
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 text-center">
+                <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 mb-1 text-center">
                   {cert.name}
                 </h3>
 
-                <p className="text-center text-blue-600 dark:text-blue-400 font-semibold mb-4">
+                <p className="text-center text-neutral-600 dark:text-neutral-400 text-sm font-medium mb-4">
                   {cert.issuer}
                 </p>
 
-                <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400 text-sm mb-4">
-                  <Calendar className="w-4 h-4" />
+                <div className="flex items-center justify-center gap-2 text-neutral-500 dark:text-neutral-400 text-xs mb-4">
+                  <Calendar className="w-3.5 h-3.5" />
                   <span>{cert.date}</span>
                 </div>
 
-                <div className="flex items-center justify-center gap-2 text-gray-600 dark:text-gray-400 text-sm mb-4 pb-4 border-b border-gray-200 dark:border-gray-700">
-                  <Shield className="w-4 h-4" />
-                  <span className="text-xs font-mono">{cert.credentialId}</span>
+                <div className="flex items-center justify-center gap-2 text-neutral-500 dark:text-neutral-400 text-xs mb-4 pb-4 border-b border-neutral-200 dark:border-neutral-800">
+                  <Shield className="w-3.5 h-3.5" />
+                  <span className="font-mono">{cert.credentialId}</span>
                 </div>
 
-                <p className="text-gray-700 dark:text-gray-300 text-sm mb-4 leading-relaxed">
+                <p className="text-neutral-600 dark:text-neutral-300 text-sm mb-4 leading-relaxed">
                   {cert.description}
                 </p>
 
                 <div className="mb-4">
                   <div className="flex items-center gap-2 mb-2">
-                    <Tag className="w-4 h-4 text-gray-600 dark:text-gray-400" />
-                    <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                    <Tag className="w-3.5 h-3.5 text-neutral-500" />
+                    <span className="text-xs font-semibold uppercase tracking-wider text-neutral-500 dark:text-neutral-400">
                       Skills
                     </span>
                   </div>
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-1.5">
                     {cert.skills.map((skill, idx) => (
-                      <motion.span
-                        key={idx}
-                        initial={{ scale: 0 }}
-                        animate={inView ? { scale: 1 } : {}}
-                        transition={{ delay: index * 0.1 + idx * 0.05 }}
-                        className="px-2 py-1 bg-gradient-to-r from-blue-100 to-accent-50 dark:from-blue-900/30 dark:to-accent-900/30 text-blue-700 dark:text-blue-300 rounded-lg text-xs font-medium"
-                      >
+                      <span key={idx} className="tag text-xs">
                         {skill}
-                      </motion.span>
+                      </span>
                     ))}
                   </div>
                 </div>
@@ -173,10 +145,10 @@ export const Certifications: React.FC = () => {
                   href={cert.badgeUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 w-full px-4 py-2 bg-gradient-to-r from-blue-600 to-accent-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all hover:-translate-y-1"
+                  className="flex items-center justify-center gap-2 w-full px-4 py-2.5 btn-primary rounded-lg text-sm transition-colors"
                 >
                   <span>View Badge</span>
-                  <ExternalLink className="w-4 h-4" />
+                  <ExternalLink className="w-3.5 h-3.5" />
                 </a>
               </motion.div>
             ))}
@@ -189,39 +161,38 @@ export const Certifications: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.4 }}
           className="mt-16"
         >
-          <h3 className="text-3xl font-bold text-center mb-8 text-gray-900 dark:text-white">
+          <h3 className="text-2xl font-semibold text-center mb-8 text-neutral-900 dark:text-neutral-50">
             More Badges at
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {portfolioData.badgeProviders.map((provider, index) => (
               <motion.a
                 key={provider.name}
                 href={provider.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={inView ? { opacity: 1, scale: 1 } : {}}
-                transition={{ duration: 0.5, delay: 0.5 + index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                className="neomorph-card bg-white dark:bg-gray-800 rounded-2xl p-6 hover:shadow-xl transition-all group"
+                initial={{ opacity: 0, y: 10 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.4, delay: 0.5 + index * 0.08 }}
+                className="neomorph-card rounded-xl p-5 transition-colors group"
               >
                 <div className="flex flex-col items-center text-center">
-                  <div className="w-20 h-20 rounded-2xl overflow-hidden mb-4 bg-gradient-to-br from-blue-100 to-accent-50 dark:from-blue-900/30 dark:to-accent-900/30 flex items-center justify-center">
+                  <div className="w-16 h-16 rounded-xl overflow-hidden mb-3 border border-neutral-200 dark:border-neutral-700 flex items-center justify-center">
                     <img
                       src={provider.logo}
                       alt={provider.name}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-base font-semibold text-neutral-900 dark:text-neutral-50 mb-1 group-hover:text-neutral-600 dark:group-hover:text-neutral-300 transition-colors">
                     {provider.name}
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
+                  <p className="text-xs text-neutral-500 dark:text-neutral-400 mb-3">
                     {provider.description}
                   </p>
-                  <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-semibold">
+                  <div className="flex items-center gap-1.5 text-neutral-600 dark:text-neutral-400 text-xs font-medium">
                     <span>Visit Platform</span>
-                    <ExternalLink className="w-4 h-4" />
+                    <ExternalLink className="w-3 h-3" />
                   </div>
                 </div>
               </motion.a>
@@ -229,21 +200,14 @@ export const Certifications: React.FC = () => {
           </div>
         </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={inView ? { opacity: 1, y: 0 } : {}}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={inView ? { opacity: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
-          className="mt-12 text-center"
+          className="mt-12 text-center text-neutral-500 dark:text-neutral-400 text-sm"
         >
-          <div className="inline-block neomorph-card bg-gradient-to-r from-blue-50 to-accent-50 dark:from-blue-900/20 dark:to-accent-900/20 rounded-2xl p-8">
-            <p className="text-gray-700 dark:text-gray-300 text-lg mb-2">
-              Committed to continuous professional development
-            </p>
-            <p className="text-gray-600 dark:text-gray-400">
-              Always expanding knowledge and staying current with industry standards
-            </p>
-          </div>
-        </motion.div>
+          Committed to continuous professional development
+        </motion.p>
       </div>
     </section>
   );

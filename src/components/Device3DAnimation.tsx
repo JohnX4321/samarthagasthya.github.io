@@ -69,11 +69,11 @@ export const Device3DAnimation: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6 }}
-          className="object-contain"
+          className="object-contain opacity-60 dark:opacity-80"
           style={{
             width: `${160 * scale}px`,
             height: `${160 * scale}px`,
-            filter: 'brightness(0) invert(1) drop-shadow(0 10px 25px rgba(255,255,255,0.3))',
+            filter: 'brightness(0)',
           }}
         />
       </motion.div>

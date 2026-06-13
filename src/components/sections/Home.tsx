@@ -11,59 +11,37 @@ export const Home: React.FC = () => {
     offset: ['start start', 'end start'],
   });
 
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%']);
-  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.5, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [1, 0.6, 0]);
 
   return (
     <section
       id="home"
       ref={ref}
-      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-20"
+      className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20 pb-20 bg-neutral-50 dark:bg-neutral-950"
     >
-  <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-accent-50 to-pink-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-accent-900/20" />
-
-      <motion.div
-        style={{ y, opacity }}
-        className="absolute inset-0 pointer-events-none"
-      >
-        <div className="absolute top-20 left-10 w-72 h-72 bg-blue-400/20 dark:bg-blue-600/10 rounded-full blur-3xl" />
-  <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent-400/20 dark:bg-accent-600/10 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-pink-400/10 dark:bg-pink-600/5 rounded-full blur-3xl" />
-      </motion.div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="max-w-4xl mx-auto text-center">
+      <motion.div style={{ opacity }} className="container mx-auto px-6 relative z-10">
+        <div className="max-w-3xl mx-auto text-center">
           <motion.div
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ type: 'spring', stiffness: 260, damping: 20, delay: 0.1 }}
-            className="mb-8 relative inline-block"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="mb-10"
           >
-            <div className="w-40 h-40 mx-auto rounded-full bg-gradient-to-br from-blue-500 via-accent-500 to-pink-500 p-1">
-              <img loading="lazy" src="/images/profile.webp" className="w-full h-full rounded-full bg-gray-100 dark:bg-gray-800 flex items-center justify-center text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-accent-600" alt="Profile Image">
-                {/*personal.name.split(' ').map(n => n[0]).join('')*/}
-
-              </img>
+            <div className="w-36 h-36 mx-auto rounded-full border border-neutral-200 dark:border-neutral-700 p-1">
+              <img
+                loading="lazy"
+                src="/images/profile.webp"
+                className="w-full h-full rounded-full object-cover bg-neutral-100 dark:bg-neutral-800"
+                alt="Profile Image"
+              />
             </div>
-            <motion.div
-              className="absolute -inset-4 bg-gradient-to-r from-blue-600 to-accent-600 rounded-full blur-xl opacity-30"
-              animate={{
-                scale: [1, 1.2, 1],
-                opacity: [0.3, 0.5, 0.3],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: 'easeInOut',
-              }}
-            />
           </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-5xl md:text-7xl font-bold mb-4 text-gray-900 dark:text-white"
+            className="text-5xl md:text-6xl font-bold mb-4 tracking-tight text-neutral-900 dark:text-neutral-50"
           >
             {personal.name}
           </motion.h1>
@@ -72,7 +50,7 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-2xl md:text-3xl font-semibold mb-6 bg-gradient-to-r from-blue-600 to-accent-600 dark:from-blue-400 dark:to-accent-400 bg-clip-text text-transparent"
+            className="text-xl md:text-2xl font-medium mb-6 text-neutral-600 dark:text-neutral-400"
           >
             {personal.title}
           </motion.h2>
@@ -81,16 +59,16 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-xl text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto italic"
+            className="text-lg text-neutral-500 dark:text-neutral-400 mb-8 max-w-xl mx-auto"
           >
-            "{personal.tagline}"
+            {personal.tagline}
           </motion.p>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg text-gray-600 dark:text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-base text-neutral-600 dark:text-neutral-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
             {personal.bio}
           </motion.p>
@@ -101,23 +79,9 @@ export const Home: React.FC = () => {
             transition={{ delay: 0.6 }}
             className="flex flex-wrap justify-center gap-4 mb-12"
           >
-            {/*<a
-              href={`mailto:${personal.email}`}
-              className="flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
-            >
-              <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-              <span className="text-gray-700 dark:text-gray-300">{personal.email}</span>
-            </a>*/}
-            {/*<a
-              href={`tel:${personal.phone}`}
-              className="flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all hover:-translate-y-1"
-            >
-              <Phone className="w-5 h-5 text-green-600 dark:text-green-400" />
-              <span className="text-gray-700 dark:text-gray-300">{personal.phone}</span>
-            </a>*/}
-            <div className="flex items-center space-x-2 px-6 py-3 bg-white dark:bg-gray-800 rounded-full shadow-lg">
-              <MapPin className="w-5 h-5 text-red-600 dark:text-red-400" />
-              <span className="text-gray-700 dark:text-gray-300">{personal.location}</span>
+            <div className="flex items-center space-x-2 px-5 py-2.5 border border-neutral-200 dark:border-neutral-700 rounded-full text-sm">
+              <MapPin className="w-4 h-4 text-neutral-500" />
+              <span className="text-neutral-700 dark:text-neutral-300">{personal.location}</span>
             </div>
           </motion.div>
 
@@ -125,27 +89,29 @@ export const Home: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.7 }}
-            className="flex justify-center space-x-6"
+            className="flex justify-center space-x-4"
           >
             {[
-              { icon: Github, href: personal.social.github, color: 'hover:text-gray-900 dark:hover:text-white' },
-              { icon: Linkedin, href: personal.social.linkedin, color: 'hover:text-blue-600 dark:hover:text-blue-400' }
-            ].filter(({ href }) => href !== "#").map(({ icon: Icon, href, color }, index) => (
-              <motion.a
-                key={index}
-                href={href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`p-4 bg-white dark:bg-gray-800 rounded-full shadow-lg text-gray-600 dark:text-gray-400 ${color} transition-all`}
-                whileHover={{ scale: 1.1, y: -5 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Icon className="w-6 h-6" />
-              </motion.a>
-            ))}
+              { icon: Github, href: personal.social.github },
+              { icon: Linkedin, href: personal.social.linkedin },
+            ]
+              .filter(({ href }) => href !== '#')
+              .map(({ icon: Icon, href }, index) => (
+                <motion.a
+                  key={index}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="p-3 border border-neutral-200 dark:border-neutral-700 rounded-full text-neutral-600 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-100 hover:border-neutral-400 dark:hover:border-neutral-500 transition-colors"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Icon className="w-5 h-5" />
+                </motion.a>
+              ))}
           </motion.div>
         </div>
-      </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0 }}
@@ -154,14 +120,14 @@ export const Home: React.FC = () => {
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
       >
         <motion.div
-          animate={{ y: [0, 10, 0] }}
+          animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
-          className="w-6 h-10 border-2 border-gray-400 dark:border-gray-600 rounded-full flex items-start justify-center p-2"
+          className="w-5 h-8 border border-neutral-400 dark:border-neutral-600 rounded-full flex items-start justify-center p-1.5"
         >
           <motion.div
-            animate={{ y: [0, 12, 0] }}
+            animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-1.5 h-1.5 bg-gray-600 dark:bg-gray-400 rounded-full"
+            className="w-1 h-1 bg-neutral-500 dark:bg-neutral-400 rounded-full"
           />
         </motion.div>
       </motion.div>

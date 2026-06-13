@@ -44,13 +44,13 @@ export const Navigation: React.FC = () => {
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className="fixed top-0 left-0 right-0 z-40 bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800"
+      className="fixed top-0 left-0 right-0 z-40 bg-white/90 dark:bg-neutral-950/90 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800"
     >
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-16">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="flex items-center justify-between md:justify-between h-16">
           <motion.div
-            className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-accent-600 dark:from-blue-400 dark:to-accent-400 bg-clip-text text-transparent"
-            whileHover={{ scale: 1.05 }}
+            className="hidden md:block text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-100 shrink-0"
+            whileHover={{ scale: 1.02 }}
           >
             Portfolio
           </motion.div>
@@ -62,10 +62,10 @@ export const Navigation: React.FC = () => {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`relative px-4 py-2 rounded-lg transition-colors ${
+                  className={`relative px-4 py-2 rounded-md transition-colors text-sm font-medium ${
                     activeSection === item.id
-                      ? 'text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                      ? 'text-neutral-900 dark:text-neutral-100'
+                      : 'text-neutral-500 dark:text-neutral-400 hover:text-neutral-900 dark:hover:text-neutral-200'
                   }`}
                 >
                   <div className="flex items-center space-x-2">
@@ -75,7 +75,7 @@ export const Navigation: React.FC = () => {
                   {activeSection === item.id && (
                     <motion.div
                       layoutId="activeSection"
-                      className="absolute inset-0 bg-blue-100 dark:bg-blue-900/30 rounded-lg -z-10"
+                      className="absolute inset-0 bg-neutral-100 dark:bg-neutral-800 rounded-md -z-10"
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -84,17 +84,18 @@ export const Navigation: React.FC = () => {
             })}
           </div>
 
-          <div className="md:hidden flex space-x-2">
+          <div className="md:hidden flex flex-1 justify-evenly min-w-0">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
-                  className={`p-2 rounded-lg ${
+                  aria-label={item.label}
+                  className={`p-1.5 rounded-md shrink-0 ${
                     activeSection === item.id
-                      ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                      : 'text-gray-600 dark:text-gray-400'
+                      ? 'bg-neutral-100 dark:bg-neutral-800 text-neutral-900 dark:text-neutral-100'
+                      : 'text-neutral-500 dark:text-neutral-400'
                   }`}
                 >
                   <Icon className="w-5 h-5" />

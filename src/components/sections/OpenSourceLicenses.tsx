@@ -137,10 +137,10 @@ const technologies: Technology[] = [
 ];
 
 const categoryColors: Record<Technology['category'], { bg: string; text: string }> = {
-  runtime: { bg: 'bg-blue-100 dark:bg-blue-900/30', text: 'text-blue-700 dark:text-blue-300' },
-  build: { bg: 'bg-purple-100 dark:bg-purple-900/30', text: 'text-purple-700 dark:text-purple-300' },
-  styling: { bg: 'bg-amber-100 dark:bg-amber-900/30', text: 'text-amber-700 dark:text-amber-300' },
-  utility: { bg: 'bg-green-100 dark:bg-green-900/30', text: 'text-green-700 dark:text-green-300' },
+  runtime: { bg: 'bg-neutral-100 dark:bg-neutral-800', text: 'text-neutral-700 dark:text-neutral-300' },
+  build: { bg: 'bg-neutral-100 dark:bg-neutral-800', text: 'text-neutral-700 dark:text-neutral-300' },
+  styling: { bg: 'bg-neutral-100 dark:bg-neutral-800', text: 'text-neutral-700 dark:text-neutral-300' },
+  utility: { bg: 'bg-neutral-100 dark:bg-neutral-800', text: 'text-neutral-700 dark:text-neutral-300' },
 };
 
 const categoryLabels: Record<Technology['category'], string> = {
@@ -186,18 +186,18 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
         onClick={(e) => e.stopPropagation()}
         className="fixed inset-0 z-50 flex items-center justify-center px-4 py-8 overflow-y-auto"
       >
-        <div className="w-full max-w-4xl bg-white dark:bg-gray-800 rounded-2xl shadow-2xl">
+        <div className="w-full max-w-4xl bg-white dark:bg-neutral-900 rounded-2xl border border-neutral-200 dark:border-neutral-800">
           {/* Header */}
-          <div className="sticky top-0 bg-white dark:bg-gray-800 px-8 py-6 border-b border-gray-200 dark:border-gray-700 flex items-center justify-between rounded-t-2xl z-10">
+          <div className="sticky top-0 bg-white dark:bg-neutral-900 px-8 py-6 border-b border-neutral-200 dark:border-neutral-800 flex items-center justify-between rounded-t-2xl z-10">
             <div className="flex items-center gap-3">
-              <Package className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
+              <Package className="w-6 h-6 text-neutral-600 dark:text-neutral-400" />
+              <h2 className="text-2xl font-semibold text-neutral-900 dark:text-neutral-50">
                 Technologies & Licenses
               </h2>
             </div>
             <button
               onClick={onClose}
-              className="p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-colors"
+              className="p-2 hover:bg-neutral-100 dark:hover:bg-neutral-800 rounded-lg transition-colors"
               aria-label="Close dialog"
             >
               <X className="w-6 h-6 text-gray-600 dark:text-gray-400" />
@@ -206,7 +206,7 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
 
           {/* Content */}
           <div className="px-8 py-6 overflow-y-auto max-h-[calc(100vh-200px)]">
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-8">
+            <p className="text-neutral-500 dark:text-neutral-400 text-sm mb-8">
               Open source technologies powering this portfolio. All licenses have been respected and acknowledged.
             </p>
 
@@ -219,10 +219,10 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
                   transition={{ duration: 0.3 }}
                 >
                   <div className="mb-6">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-lg font-semibold text-neutral-900 dark:text-neutral-50 mb-2">
                       {categoryLabels[category]}
                     </h3>
-                    <div className="h-1 w-12 bg-gradient-to-r from-blue-600 to-accent-600 rounded-full" />
+                    <div className="section-divider !mx-0" />
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -234,7 +234,7 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
                           initial={{ opacity: 0, scale: 0.95 }}
                           animate={{ opacity: 1, scale: 1 }}
                           transition={{ duration: 0.3, delay: index * 0.05 }}
-                          className="bg-gray-50 dark:bg-gray-700 rounded-xl p-4 hover:shadow-md transition-all"
+                          className="bg-neutral-50 dark:bg-neutral-800 border border-neutral-200 dark:border-neutral-700 rounded-xl p-4 hover:border-neutral-300 dark:hover:border-neutral-600 transition-colors"
                         >
                           <div className="flex items-start justify-between mb-3">
                             <div className="flex-1">
@@ -249,10 +249,10 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
                               href={tech.url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 hover:bg-gray-200 dark:hover:bg-gray-600 rounded-lg transition-colors flex-shrink-0"
+                              className="p-2 hover:bg-neutral-200 dark:hover:bg-neutral-700 rounded-lg transition-colors flex-shrink-0"
                               aria-label={`Visit ${tech.name} website`}
                             >
-                              <ExternalLink className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+                              <ExternalLink className="w-4 h-4 text-neutral-600 dark:text-neutral-400" />
                             </a>
                           </div>
 
@@ -276,7 +276,7 @@ export const OpenSourceLicenses: React.FC<OpenSourceLicensesProps> = ({ isOpen, 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.3, delay: 0.2 }}
-              className="mt-10 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800"
+              className="mt-10 p-4 bg-neutral-50 dark:bg-neutral-800 rounded-xl border border-neutral-200 dark:border-neutral-700"
             >
               <p className="text-gray-700 dark:text-gray-300 text-sm">
                 Special thanks to all the open source maintainers and contributors. Click the links above to visit official project pages.
